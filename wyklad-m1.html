@@ -132,6 +132,17 @@ tr.wyrozniony td{background:#FFF2CC;font-weight:700}
 <div class="def"><p><strong>Formuły (polski Excel)</strong></p><div id="excel-pl"></div><p><strong>Formuły (angielski Excel)</strong></p><div id="excel-en"></div><p><strong>Kroki</strong></p><ol id="excel-kroki"></ol></div>
 <div class="pytanie-sali"><strong>Pytanie do sali:</strong> Co zrobić z jedyną osobą na levelu 9? Dlaczego sama dokładna pensja bywa odciskiem palca?</div>
 </section>
+<section id="r4" class="rozdzial" data-nr="4" aria-labelledby="t4" hidden>
+<h2 id="t4">4. Detektyw: spróbuj złamać własną anonimizację</h2>
+<div class="cel"><strong>CEL.</strong> Spróbuj złamać własną anonimizację: czy znajomy z firmy, który wie o kimś kilka rzeczy, odnajdzie go w Twoim pliku?</div>
+<p>Gra działa na tym, co ustawiłeś w rozdziale 3. Jeśli nic nie zmieniałeś, plik jest oryginalny, więc łatwo. Pięć rund, w każdej inna osoba.</p>
+<h3 id="detektyw-runda" aria-live="polite"></h3>
+<p id="detektyw-wskazowka"></p>
+<p id="detektyw-kandydaci" aria-live="polite"></p>
+<p><button type="button" id="detektyw-dalej">Dalej</button> <button type="button" id="detektyw-od-nowa">Zacznij od nowa</button> <button type="button" id="detektyw-wroc">Wróć do rozdziału 3 i popraw anonimizację</button></p>
+<div id="detektyw-wynik" class="werdykt" aria-live="polite"></div>
+<div class="pytanie-sali"><strong>Pytanie do sali:</strong> Która jedna zmiana w rozdziale 3 najbardziej utrudniła zadanie detektywowi?</div>
+</section>
 <section id="r5" class="rozdzial" data-nr="5" aria-labelledby="t5" hidden>
 <h2 id="t5">5. Dane syntetyczne</h2>
 <div class="cel"><strong>CEL.</strong> Chcę przetestować prompt albo dashboard, a nie wolno mi użyć prawdziwych danych.</div>
@@ -603,9 +614,23 @@ tr.wyrozniony td{background:#FFF2CC;font-weight:700}
   function przepisExcel(kol, akcja) { var p = PRZEPISY[akcja] || PRZEPISY.zostaw; return { pl: p.pl, en: p.en, kroki: p.kroki }; }
   function przepisTestGrup() { return { pl: "=LICZ.WARUNKI(E:E;E5;G:G;G5)", en: "=COUNTIFS(E:E,E5,G:G,G5)", kroki: "Dla wybranych kolumn (tu: dział i level) policz wiersze o tych samych wartościach. Formatowanie warunkowe: wartości mniejsze niż 3 na czerwono." }; }
 
+  // Detektyw: runda = wylosowana osoba + 3 cechy, ktore "kolega z firmy" zna (deterministycznie z ziarna)
+  function losujRunde(osoby, ziarno, nr) {
+    var ids = tasuj(osoby.map(function (o) { return o.id; }), ziarno);
+    return { idCelu: ids[(nr - 1) % ids.length], wskazowki: tasuj(POSREDNIE, ziarno + nr * 7919).slice(0, 3) };
+  }
+  // Ilu kandydatow pasuje do wskazowek po przeksztalceniu danych (wskazowka przekladana ta sama regula co dane)
+  function kandydaci(w, osoby, idCelu, wskazowki, u) {
+    var cel = w.wiersze.filter(function (r) { return r.id === idCelu; })[0];
+    var uzyteczne = wskazowki.filter(function (k) { return w.kolumny.indexOf(k) >= 0; });
+    if (!cel) return { ids: [], zidentyfikowano: false, uzyteczne: uzyteczne };
+    var ids = w.wiersze.filter(function (r) { return uzyteczne.every(function (k) { return r.wartosci[k] === cel.wartosci[k]; }); }).map(function (r) { return r.id; });
+    return { ids: ids, zidentyfikowano: ids.length === 1 && ids[0] === idCelu, uzyteczne: uzyteczne };
+  }
+
   var API = { PROG: PROG, ID_PREZESA: ID_PREZESA, KOLUMNY: KOLUMNY, IDENT: IDENT, POSREDNIE: POSREDNIE, NEEDED: NEEDED, AKCJE: AKCJE, NAZWY_AKCJI: NAZWY_AKCJI, DOMYSLNE: DOMYSLNE,
     ROZWIAZANIE_WZOROWE: ROZWIAZANIE_WZOROWE, zastosuj: zastosuj, wielkosciGrup: wielkosciGrup, werdykt: werdykt, kontrolaCelu: kontrolaCelu,
-    klasyfikujKolumny: klasyfikujKolumny, przepisExcel: przepisExcel, przepisTestGrup: przepisTestGrup, mulberry32: mulberry32, tasuj: tasuj };
+    klasyfikujKolumny: klasyfikujKolumny, przepisExcel: przepisExcel, przepisTestGrup: przepisTestGrup, losujRunde: losujRunde, kandydaci: kandydaci, mulberry32: mulberry32, tasuj: tasuj };
   g.WykladLogika = API; if (typeof module !== "undefined" && module.exports) module.exports = API;
 })(typeof window !== "undefined" ? window : globalThis);
 </script>
@@ -760,6 +785,34 @@ tr.wyrozniony td{background:#FFF2CC;font-weight:700}
     tekst($("#cel-kontrola"), t.length ? t.join(" ") : "Cel osiągnięty: zostały tylko kolumny potrzebne do pytania.");
     siatka(w); excel(u); mapaKodow(w);
   });
+
+  // ---------- rozdzial 4: detektyw ----------
+  var det = { ziarno: 20261115, nr: 1, wynik: null };
+  function wartoscOryg(o, kol) { return kol === "pensja" ? kwota(o[kol]) : o[kol]; }
+  function renderDetektyw() {
+    var w = wynik(), u = Wyklad.stan.ustawienia, nr = Math.min(det.nr, 5);
+    var r = L.losujRunde(OSOBY, det.ziarno, nr), o = OSOBY.filter(function (x) { return x.id === r.idCelu; })[0];
+    var k = L.kandydaci(w, OSOBY, r.idCelu, r.wskazowki, u);
+    $("#detektyw-runda").textContent = "Runda " + nr + " z 5";
+    $("#detektyw-wskazowka").textContent = "Kolega z firmy wie: " + r.wskazowki.map(function (c) { return nazwaKol(c) + " " + wartoscOryg(o, c); }).join(", ") +
+      ". W Twoim pliku widać z tego: " + (k.uzyteczne.length ? k.uzyteczne.map(function (c) { var rw = w.wiersze.filter(function (x) { return x.id === r.idCelu; })[0]; return nazwaKol(c) + " " + (rw ? rw.wartosci[c] : "(wiersz usunięty)"); }).join(", ") : "nic (te kolumny usunięto)") + ".";
+    var t;
+    if (!w.wiersze.some(function (x) { return x.id === r.idCelu; })) t = "Kandydatów: 0. Wiersz tej osoby usunięto, więc nie da się jej znaleźć.";
+    else if (k.zidentyfikowano) { var rw2 = w.wiersze.filter(function (x) { return x.id === r.idCelu; })[0]; t = "Zidentyfikowano! Kandydatów: 1. " + (rw2.wartosci.pensja !== undefined ? "Jej wynagrodzenie to " + kwota(rw2.wartosci.pensja) + " zł." : "Znasz jej wiersz."); }
+    else t = "Kandydatów: " + k.ids.length + ". Nie da się wskazać jednej osoby.";
+    $("#detektyw-kandydaci").textContent = t;
+    $("#detektyw-dalej").textContent = nr === 5 ? "Pokaż wynik" : "Dalej";
+    var el = $("#detektyw-wynik");
+    if (det.wynik === null) { el.textContent = ""; return; }
+    var licz = 0; for (var i = 1; i <= 5; i++) { var rr = L.losujRunde(OSOBY, det.ziarno, i); if (L.kandydaci(w, OSOBY, rr.idCelu, rr.wskazowki, u).zidentyfikowano) licz++; }
+    el.textContent = "Zidentyfikowano " + licz + " z 5. " + (licz ? "Wróć do rozdziału 3 i popraw anonimizację." : "Dobra robota: nikogo nie udało się wskazać.");
+  }
+  $("#detektyw-dalej").addEventListener("click", function () {
+    if (det.nr < 5) det.nr++; else det.wynik = true; przelicz();
+  });
+  $("#detektyw-od-nowa").addEventListener("click", function () { det.ziarno += 1; det.nr = 1; det.wynik = null; przelicz(); });
+  $("#detektyw-wroc").addEventListener("click", function () { location.hash = "#3"; pokaz(3); });
+  Wyklad.rejestr.push(renderDetektyw);
 
   pokaz(zHasha());
 })();
