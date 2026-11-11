@@ -1,0 +1,711 @@
+﻿id,dzial,rodzina_stanowisk,level,sciezka,plec,tryb_pracy,data_zatrudnienia,data_odejscia,typ_odejscia,powod_odejscia,ostatnia_ocena_roczna,odejscie_zalowane
+OS0001,IT,Inżynieria,3,M,M,stacjonarnie,2025-10-22,2025-12-14,dobrowolne,lepsza oferta finansowa,,nie
+OS0002,Sprzedaż,Operacje,2,IC,M,hybrydowo,2026-03-30,,,,4,
+OS0003,IT,Inżynieria,1,IC,M,hybrydowo,2025-05-10,,,,4,
+OS0004,Obsługa klienta,Operacje,1,IC,M,hybrydowo,2024-02-13,,,,4,
+OS0005,IT,Inżynieria,2,IC,M,hybrydowo,2025-03-19,,,,4,
+OS0006,Sprzedaż,Sprzedaż,2,IC,K,hybrydowo,2025-02-14,,,,3,
+OS0007,Obsługa klienta,Sprzedaż,2,IC,M,stacjonarnie,2026-03-16,,,,2,
+OS0008,Obsługa klienta,Operacje,2,IC,K,stacjonarnie,2019-06-18,,,,5,
+OS0009,Logistyka,Operacje,6,IC,K,hybrydowo,2025-12-30,,,,3,
+OS0010,HR,HR,2,IC,K,zdalnie,2025-12-18,,,,3,
+OS0011,Sprzedaż,Sprzedaż,4,IC,K,zdalnie,2022-06-23,,,,3,
+OS0012,Logistyka,Operacje,3,IC,M,stacjonarnie,2012-03-01,,,,3,
+OS0013,Obsługa klienta,Operacje,1,IC,K,stacjonarnie,2025-05-12,,,,4,
+OS0014,Sprzedaż,Sprzedaż,6,IC,K,zdalnie,2023-11-28,,,,3,
+OS0015,Logistyka,Operacje,6,IC,M,stacjonarnie,2017-08-27,,,,4,
+OS0016,Logistyka,Operacje,3,IC,M,stacjonarnie,2020-05-03,2024-11-09,z inicjatywy firmy,redukcja etatu,2,nie
+OS0017,Obsługa klienta,Operacje,1,IC,M,stacjonarnie,2025-03-31,2026-03-04,dobrowolne,tryb i warunki pracy,3,tak
+OS0018,HR,Operacje,4,M,K,hybrydowo,2022-03-08,,,,5,
+OS0019,IT,Inżynieria,5,IC,K,zdalnie,2022-12-30,2026-03-04,dobrowolne,brak możliwości rozwoju,4,tak
+OS0020,Obsługa klienta,Operacje,1,IC,M,hybrydowo,2021-06-22,,,,2,
+OS0021,Logistyka,HR,6,M,M,stacjonarnie,2026-08-25,,,,,
+OS0022,HR,HR,2,IC,K,zdalnie,2022-11-08,,,,3,
+OS0023,Obsługa klienta,Marketing,2,IC,K,hybrydowo,2025-08-22,2025-09-05,dobrowolne,lepsza oferta finansowa,,nie
+OS0024,Sprzedaż,Sprzedaż,1,IC,M,stacjonarnie,2024-11-27,2025-02-16,dobrowolne,tryb i warunki pracy,,nie
+OS0025,IT,Inżynieria,4,IC,K,zdalnie,2022-04-03,2025-08-14,dobrowolne,relacje z przełożonym,3,nie
+OS0026,HR,HR,4,IC,M,zdalnie,2023-04-21,2026-04-02,z inicjatywy firmy,redukcja etatu,3,nie
+OS0027,Obsługa klienta,Inżynieria,1,IC,K,hybrydowo,2026-02-03,2026-03-25,z inicjatywy firmy,niezaliczony okres próbny,,nie
+OS0028,Sprzedaż,Sprzedaż,4,IC,M,zdalnie,2026-03-21,,,,4,
+OS0029,Sprzedaż,Sprzedaż,2,IC,M,stacjonarnie,2016-02-20,,,,3,
+OS0030,Logistyka,Operacje,2,IC,K,stacjonarnie,2020-08-13,2025-04-19,dobrowolne,relacje z przełożonym,3,nie
+OS0031,Obsługa klienta,Operacje,1,IC,K,hybrydowo,2026-08-13,,,,,
+OS0032,Sprzedaż,Sprzedaż,3,IC,M,hybrydowo,2025-11-11,,,,3,
+OS0033,IT,Inżynieria,2,IC,M,hybrydowo,2020-10-23,,,,3,
+OS0034,Finanse,Finanse,5,IC,K,hybrydowo,2022-06-06,,,,3,
+OS0035,IT,Inżynieria,6,IC,M,zdalnie,2026-05-15,,,,,
+OS0036,Obsługa klienta,Operacje,3,IC,M,hybrydowo,2022-10-14,,,,4,
+OS0037,Obsługa klienta,Operacje,3,IC,M,stacjonarnie,2023-04-07,,,,5,
+OS0038,IT,Inżynieria,3,IC,M,hybrydowo,2019-11-29,,,,3,
+OS0039,Sprzedaż,Sprzedaż,2,IC,K,zdalnie,2025-03-31,,,,3,
+OS0040,Sprzedaż,Sprzedaż,4,IC,M,zdalnie,2024-08-05,,,,4,
+OS0041,Sprzedaż,Sprzedaż,2,IC,K,hybrydowo,2024-11-09,,,,4,
+OS0042,HR,HR,2,IC,K,hybrydowo,2025-01-16,,,,5,
+OS0043,Sprzedaż,Sprzedaż,1,IC,M,hybrydowo,2024-08-28,,,,4,
+OS0044,Obsługa klienta,Sprzedaż,4,M,K,stacjonarnie,2026-04-08,,,,4,
+OS0045,Obsługa klienta,Operacje,4,IC,M,hybrydowo,2022-02-28,2025-03-31,dobrowolne,powody osobiste,5,tak
+OS0046,Logistyka,Operacje,2,IC,M,stacjonarnie,2026-03-26,,,,4,
+OS0047,Obsługa klienta,Operacje,2,IC,M,hybrydowo,2021-01-20,,,,3,
+OS0048,Finanse,Finanse,2,IC,K,hybrydowo,2022-11-29,,,,3,
+OS0049,IT,Inżynieria,2,IC,K,hybrydowo,2016-12-21,,,,4,
+OS0050,IT,Inżynieria,3,IC,M,hybrydowo,2025-06-21,,,,5,
+OS0051,IT,Operacje,3,IC,M,zdalnie,2019-03-03,,,,4,
+OS0052,Logistyka,Operacje,2,IC,M,hybrydowo,2022-07-15,,,,3,
+OS0053,Obsługa klienta,Operacje,1,IC,K,stacjonarnie,2025-06-11,,,,3,
+OS0054,IT,Inżynieria,3,IC,M,hybrydowo,2025-05-06,,,,4,
+OS0055,Logistyka,Operacje,4,IC,K,hybrydowo,2022-04-12,,,,5,
+OS0056,IT,Inżynieria,2,IC,M,hybrydowo,2025-05-04,,,,3,
+OS0057,Obsługa klienta,Operacje,3,M,M,stacjonarnie,2026-06-23,,,,,
+OS0058,Marketing,Marketing,5,IC,K,hybrydowo,2026-05-31,,,,,
+OS0059,Finanse,Finanse,2,IC,K,hybrydowo,2026-04-18,,,,4,
+OS0060,Logistyka,Operacje,3,IC,M,stacjonarnie,2025-09-30,,,,4,
+OS0061,Sprzedaż,Sprzedaż,2,IC,M,hybrydowo,2024-03-15,,,,2,
+OS0062,Logistyka,Finanse,2,IC,M,hybrydowo,2022-06-04,,,,5,
+OS0063,Logistyka,HR,1,IC,M,stacjonarnie,2025-09-09,,,,3,
+OS0064,HR,HR,4,IC,M,hybrydowo,2020-09-18,2026-06-30,dobrowolne,relacje z przełożonym,4,tak
+OS0065,Marketing,Marketing,3,IC,K,hybrydowo,2026-05-02,,,,,
+OS0066,Obsługa klienta,Operacje,4,IC,M,zdalnie,2022-02-17,2025-05-19,dobrowolne,lepsza oferta finansowa,3,tak
+OS0067,Obsługa klienta,Operacje,2,IC,K,hybrydowo,2022-09-21,,,,3,
+OS0068,Marketing,Marketing,3,IC,K,hybrydowo,2018-04-20,2025-01-17,dobrowolne,lepsza oferta finansowa,3,tak
+OS0069,Obsługa klienta,Operacje,3,IC,K,stacjonarnie,2026-01-31,,,,3,
+OS0070,IT,Inżynieria,6,IC,M,zdalnie,2012-01-11,,,,3,
+OS0071,Logistyka,Operacje,5,IC,K,stacjonarnie,2016-02-25,2025-11-14,dobrowolne,lepsza oferta finansowa,3,nie
+OS0072,IT,Finanse,2,IC,K,zdalnie,2023-03-05,,,,3,
+OS0073,Sprzedaż,Inżynieria,5,IC,M,hybrydowo,2023-03-15,,,,4,
+OS0074,Sprzedaż,Sprzedaż,4,IC,K,zdalnie,2013-05-02,,,,3,
+OS0075,Obsługa klienta,Operacje,3,IC,K,stacjonarnie,2022-10-12,2026-01-30,z inicjatywy firmy,wyniki pracy,2,nie
+OS0076,IT,Inżynieria,4,IC,M,zdalnie,2026-08-23,,,,,
+OS0077,Marketing,Marketing,3,IC,K,stacjonarnie,2024-01-29,2025-01-27,dobrowolne,tryb i warunki pracy,4,tak
+OS0078,Obsługa klienta,Operacje,1,IC,K,hybrydowo,2025-02-22,,,,4,
+OS0079,IT,Inżynieria,2,IC,K,zdalnie,2026-09-08,,,,,
+OS0080,IT,Inżynieria,3,IC,M,zdalnie,2018-02-25,,,,3,
+OS0081,Marketing,HR,6,M,M,hybrydowo,2016-05-24,,,,5,
+OS0082,IT,Inżynieria,1,IC,M,hybrydowo,2026-01-02,,,,4,
+OS0083,Obsługa klienta,Inżynieria,4,IC,M,hybrydowo,2022-01-15,,,,4,
+OS0084,IT,Inżynieria,3,IC,M,zdalnie,2021-08-13,,,,4,
+OS0085,Finanse,Finanse,2,IC,K,zdalnie,2020-03-15,,,,4,
+OS0086,Sprzedaż,Sprzedaż,1,IC,K,hybrydowo,2022-06-02,,,,2,
+OS0087,HR,HR,1,IC,K,stacjonarnie,2021-01-12,,,,3,
+OS0088,IT,Inżynieria,3,IC,M,stacjonarnie,2023-06-11,2025-05-15,dobrowolne,tryb i warunki pracy,3,nie
+OS0089,Logistyka,Operacje,4,M,K,stacjonarnie,2014-01-20,2026-08-15,dobrowolne,powody osobiste,4,tak
+OS0090,Finanse,Finanse,2,IC,K,stacjonarnie,2010-09-15,,,,2,
+OS0091,Sprzedaż,Sprzedaż,1,IC,M,stacjonarnie,2026-02-18,,,,4,
+OS0092,Sprzedaż,HR,3,IC,K,stacjonarnie,2023-03-01,2025-10-10,dobrowolne,brak możliwości rozwoju,5,tak
+OS0093,Sprzedaż,Marketing,4,IC,M,hybrydowo,2023-08-11,,,,3,
+OS0094,Sprzedaż,Sprzedaż,3,IC,M,zdalnie,2021-02-27,,,,4,
+OS0095,Obsługa klienta,Operacje,2,IC,K,hybrydowo,2025-07-30,,,,3,
+OS0096,Obsługa klienta,Operacje,5,IC,M,stacjonarnie,2022-08-05,2026-03-21,dobrowolne,lepsza oferta finansowa,3,nie
+OS0097,Obsługa klienta,Operacje,3,IC,K,stacjonarnie,2023-04-23,,,,3,
+OS0098,Obsługa klienta,Operacje,3,M,M,hybrydowo,2025-04-14,2025-05-20,dobrowolne,lepsza oferta finansowa,,nie
+OS0099,Sprzedaż,HR,3,IC,M,zdalnie,2025-04-03,,,,3,
+OS0100,Marketing,Marketing,3,IC,K,hybrydowo,2025-05-19,,,,3,
+OS0101,Finanse,Finanse,6,IC,M,hybrydowo,2022-02-25,,,,3,
+OS0102,Logistyka,Operacje,2,IC,M,stacjonarnie,2026-02-14,2026-10-14,dobrowolne,lepsza oferta finansowa,3,nie
+OS0103,IT,Inżynieria,5,IC,K,stacjonarnie,2020-12-24,2025-07-10,dobrowolne,brak możliwości rozwoju,4,tak
+OS0104,IT,Inżynieria,1,IC,M,zdalnie,2025-05-19,,,,3,
+OS0105,Obsługa klienta,Operacje,4,IC,K,stacjonarnie,2021-01-11,,,,3,
+OS0106,IT,Inżynieria,3,IC,M,zdalnie,2024-08-02,2025-03-30,dobrowolne,lepsza oferta finansowa,4,tak
+OS0107,IT,Inżynieria,3,IC,M,zdalnie,2023-09-01,2025-05-08,z inicjatywy firmy,wyniki pracy,3,nie
+OS0108,Sprzedaż,Sprzedaż,3,IC,M,hybrydowo,2022-11-14,,,,3,
+OS0109,Logistyka,Operacje,3,IC,M,stacjonarnie,2025-10-17,,,,4,
+OS0110,Marketing,Marketing,4,IC,M,hybrydowo,2020-07-20,,,,3,
+OS0111,Sprzedaż,Sprzedaż,2,IC,M,hybrydowo,2019-07-14,,,,4,
+OS0112,Logistyka,Operacje,5,IC,M,stacjonarnie,2022-08-26,2025-06-23,dobrowolne,powody osobiste,3,nie
+OS0113,Sprzedaż,Sprzedaż,3,IC,M,zdalnie,2021-01-16,,,,4,
+OS0114,Sprzedaż,Sprzedaż,3,IC,M,hybrydowo,2023-03-23,2025-12-26,dobrowolne,relacje z przełożonym,4,tak
+OS0115,IT,Inżynieria,2,IC,M,hybrydowo,2025-10-12,2026-09-18,dobrowolne,powody osobiste,1,nie
+OS0116,Obsługa klienta,Operacje,4,M,M,stacjonarnie,2025-09-24,2026-02-05,dobrowolne,tryb i warunki pracy,,tak
+OS0117,Logistyka,Operacje,3,IC,M,stacjonarnie,2018-08-31,2025-02-07,dobrowolne,brak możliwości rozwoju,4,tak
+OS0118,IT,Inżynieria,1,IC,M,zdalnie,2018-07-04,,,,2,
+OS0119,IT,Inżynieria,3,IC,M,zdalnie,2026-06-24,,,,,
+OS0120,Sprzedaż,Sprzedaż,2,IC,K,hybrydowo,2025-07-02,,,,3,
+OS0121,Marketing,Marketing,3,IC,M,zdalnie,2023-07-10,,,,4,
+OS0122,Logistyka,Operacje,2,IC,M,stacjonarnie,2024-11-20,,,,2,
+OS0123,Obsługa klienta,Operacje,3,M,M,zdalnie,2023-05-02,,,,2,
+OS0124,Obsługa klienta,Operacje,4,M,K,stacjonarnie,2026-04-02,,,,3,
+OS0125,Logistyka,Operacje,3,IC,M,hybrydowo,2025-12-10,,,,3,
+OS0126,Sprzedaż,Sprzedaż,1,IC,K,hybrydowo,2021-03-04,,,,3,
+OS0127,IT,Inżynieria,3,IC,M,hybrydowo,2024-04-05,2025-05-10,dobrowolne,zmiana branży,5,nie
+OS0128,Finanse,Finanse,7,M,M,hybrydowo,2022-07-05,,,,3,
+OS0129,IT,Inżynieria,4,IC,M,hybrydowo,2022-11-28,,,,3,
+OS0130,Logistyka,Operacje,4,IC,M,stacjonarnie,2026-04-16,,,,3,
+OS0131,HR,Sprzedaż,1,IC,K,hybrydowo,2026-03-07,,,,4,
+OS0132,Logistyka,Operacje,4,M,M,stacjonarnie,2021-01-30,,,,2,
+OS0133,Obsługa klienta,Operacje,8,M,M,stacjonarnie,2025-11-28,,,,3,
+OS0134,Sprzedaż,Sprzedaż,2,IC,M,zdalnie,2024-07-30,,,,3,
+OS0135,Finanse,Operacje,4,IC,K,hybrydowo,2026-05-17,,,,,
+OS0136,Logistyka,Operacje,3,M,M,hybrydowo,2017-08-18,,,,4,
+OS0137,Obsługa klienta,Operacje,4,IC,K,stacjonarnie,2025-01-21,,,,3,
+OS0138,Marketing,Marketing,1,IC,K,hybrydowo,2024-12-31,,,,4,
+OS0139,Obsługa klienta,Operacje,3,IC,K,hybrydowo,2026-04-07,,,,2,
+OS0140,Sprzedaż,Sprzedaż,3,M,M,hybrydowo,2024-11-25,,,,2,
+OS0141,Obsługa klienta,Operacje,1,IC,K,stacjonarnie,2016-08-24,2025-12-05,dobrowolne,lepsza oferta finansowa,3,tak
+OS0142,Finanse,Finanse,3,IC,M,hybrydowo,2026-08-19,,,,,
+OS0143,IT,Inżynieria,2,IC,K,hybrydowo,2018-05-26,,,,5,
+OS0144,Logistyka,Operacje,6,M,M,stacjonarnie,2021-01-14,,,,3,
+OS0145,IT,Inżynieria,3,IC,M,zdalnie,2021-01-26,,,,3,
+OS0146,Finanse,Finanse,5,IC,K,hybrydowo,2025-06-03,,,,3,
+OS0147,Logistyka,Marketing,2,IC,M,stacjonarnie,2019-10-02,,,,3,
+OS0148,Obsługa klienta,Finanse,5,M,M,zdalnie,2026-07-28,,,,,
+OS0149,IT,Inżynieria,2,IC,M,zdalnie,2021-03-09,,,,3,
+OS0150,Sprzedaż,Sprzedaż,2,IC,K,hybrydowo,2025-05-23,2025-08-13,z inicjatywy firmy,niezaliczony okres próbny,,nie
+OS0151,Sprzedaż,Sprzedaż,4,IC,M,zdalnie,2022-01-24,,,,3,
+OS0152,Obsługa klienta,Operacje,4,IC,M,hybrydowo,2025-06-14,,,,3,
+OS0153,Sprzedaż,Sprzedaż,2,IC,K,stacjonarnie,2022-06-02,,,,3,
+OS0154,Obsługa klienta,Finanse,1,IC,K,stacjonarnie,2022-11-11,,,,4,
+OS0155,Logistyka,Operacje,3,M,M,hybrydowo,2025-09-25,,,,5,
+OS0156,Logistyka,Operacje,7,M,K,zdalnie,2017-10-31,,,,4,
+OS0157,Logistyka,Operacje,4,IC,M,stacjonarnie,2025-09-20,,,,4,
+OS0158,Obsługa klienta,Operacje,3,IC,K,stacjonarnie,2022-11-18,2025-05-01,z inicjatywy firmy,redukcja etatu,1,nie
+OS0159,IT,Inżynieria,2,IC,K,hybrydowo,2025-05-13,,,,2,
+OS0160,Obsługa klienta,Operacje,2,IC,M,zdalnie,2020-06-27,,,,3,
+OS0161,Sprzedaż,Sprzedaż,5,M,M,zdalnie,2023-01-29,,,,5,
+OS0162,Sprzedaż,Marketing,2,IC,K,stacjonarnie,2018-10-13,,,,3,
+OS0163,Obsługa klienta,Sprzedaż,4,IC,K,stacjonarnie,2026-08-17,,,,,
+OS0164,Logistyka,Operacje,2,IC,K,stacjonarnie,2019-05-25,,,,3,
+OS0165,Marketing,Marketing,2,IC,K,hybrydowo,2022-12-30,,,,3,
+OS0166,Obsługa klienta,Operacje,3,M,K,stacjonarnie,2023-09-16,,,,5,
+OS0167,Obsługa klienta,Sprzedaż,3,IC,K,hybrydowo,2024-11-17,,,,2,
+OS0168,Logistyka,Operacje,1,IC,K,hybrydowo,2024-12-26,,,,4,
+OS0169,IT,Inżynieria,1,IC,K,hybrydowo,2017-08-26,,,,3,
+OS0170,Obsługa klienta,Marketing,2,IC,K,zdalnie,2022-10-06,,,,5,
+OS0171,Obsługa klienta,Operacje,4,IC,M,zdalnie,2024-07-02,,,,4,
+OS0172,Logistyka,Operacje,3,IC,M,hybrydowo,2025-06-14,,,,3,
+OS0173,HR,HR,3,IC,K,hybrydowo,2022-01-16,,,,3,
+OS0174,Finanse,Finanse,3,IC,M,stacjonarnie,2023-07-21,2025-11-30,dobrowolne,powody osobiste,4,tak
+OS0175,Logistyka,Operacje,2,IC,M,hybrydowo,2023-12-20,,,,2,
+OS0176,Sprzedaż,Sprzedaż,3,IC,K,stacjonarnie,2025-03-29,2025-04-02,dobrowolne,zmiana branży,,nie
+OS0177,Sprzedaż,Sprzedaż,5,M,K,hybrydowo,2024-03-06,,,,3,
+OS0178,Obsługa klienta,Operacje,4,IC,M,stacjonarnie,2020-10-23,2026-01-14,dobrowolne,tryb i warunki pracy,5,tak
+OS0179,Sprzedaż,Sprzedaż,5,M,M,hybrydowo,2025-12-08,,,,3,
+OS0180,Logistyka,Operacje,3,IC,K,stacjonarnie,2026-04-21,,,,4,
+OS0181,IT,Inżynieria,4,IC,M,hybrydowo,2026-02-23,,,,3,
+OS0182,Obsługa klienta,Operacje,3,IC,K,stacjonarnie,2018-09-28,,,,2,
+OS0183,IT,Inżynieria,2,IC,M,hybrydowo,2026-07-17,,,,,
+OS0184,Marketing,Marketing,4,IC,K,stacjonarnie,2025-11-28,2026-10-04,z inicjatywy firmy,naruszenie zasad,3,nie
+OS0185,Sprzedaż,Sprzedaż,2,IC,K,zdalnie,2023-03-03,,,,4,
+OS0186,Logistyka,Operacje,1,IC,M,stacjonarnie,2020-03-27,,,,3,
+OS0187,IT,Inżynieria,3,IC,K,stacjonarnie,2021-05-30,2026-09-04,dobrowolne,relacje z przełożonym,3,nie
+OS0188,Sprzedaż,Sprzedaż,1,IC,K,hybrydowo,2025-05-29,2025-09-19,z inicjatywy firmy,niezaliczony okres próbny,,nie
+OS0189,Sprzedaż,Operacje,1,IC,K,hybrydowo,2025-02-07,,,,4,
+OS0190,HR,HR,3,IC,M,hybrydowo,2024-11-18,2026-05-21,dobrowolne,zmiana branży,4,tak
+OS0191,Sprzedaż,Sprzedaż,4,IC,K,hybrydowo,2024-12-19,2025-02-25,z inicjatywy firmy,niezaliczony okres próbny,,nie
+OS0192,Finanse,Finanse,2,IC,M,stacjonarnie,2025-07-27,2026-08-23,z inicjatywy firmy,redukcja etatu,2,nie
+OS0193,Obsługa klienta,HR,3,IC,K,hybrydowo,2021-12-31,,,,4,
+OS0194,Sprzedaż,Sprzedaż,3,IC,M,hybrydowo,2022-12-17,,,,3,
+OS0195,Obsługa klienta,Operacje,4,IC,M,stacjonarnie,2017-05-09,,,,2,
+OS0196,Obsługa klienta,Operacje,4,IC,M,stacjonarnie,2026-03-29,,,,3,
+OS0197,Finanse,Finanse,3,IC,K,stacjonarnie,2022-11-18,2025-10-28,z inicjatywy firmy,redukcja etatu,1,nie
+OS0198,IT,Inżynieria,1,IC,M,hybrydowo,2023-04-03,,,,2,
+OS0199,Obsługa klienta,Sprzedaż,3,IC,M,hybrydowo,2024-01-11,,,,3,
+OS0200,Obsługa klienta,Operacje,5,M,K,hybrydowo,2021-11-27,,,,3,
+OS0201,Obsługa klienta,Operacje,3,IC,M,zdalnie,2024-04-29,,,,3,
+OS0202,Marketing,Marketing,3,IC,K,hybrydowo,2025-06-15,,,,3,
+OS0203,IT,Inżynieria,2,IC,M,zdalnie,2023-06-12,,,,4,
+OS0204,Marketing,Marketing,4,IC,K,hybrydowo,2021-08-19,2026-03-15,dobrowolne,zmiana branży,3,nie
+OS0205,Finanse,Finanse,4,IC,K,hybrydowo,2024-07-08,,,,3,
+OS0206,Finanse,Finanse,5,M,K,hybrydowo,2020-09-25,,,,3,
+OS0207,Finanse,Finanse,3,IC,M,zdalnie,2024-09-02,,,,4,
+OS0208,IT,Inżynieria,3,IC,M,hybrydowo,2023-01-02,,,,2,
+OS0209,IT,Sprzedaż,2,IC,K,hybrydowo,2024-11-07,,,,3,
+OS0210,Sprzedaż,Sprzedaż,1,IC,M,hybrydowo,2022-02-16,2025-01-22,dobrowolne,lepsza oferta finansowa,5,tak
+OS0211,Sprzedaż,Sprzedaż,3,IC,M,hybrydowo,2020-03-21,2025-01-23,z inicjatywy firmy,wyniki pracy,3,nie
+OS0212,Sprzedaż,Sprzedaż,3,IC,M,zdalnie,2026-06-14,2026-08-07,dobrowolne,powody osobiste,,tak
+OS0213,Logistyka,Operacje,1,IC,M,stacjonarnie,2025-09-10,,,,3,
+OS0214,HR,Marketing,5,IC,M,hybrydowo,2018-04-24,,,,4,
+OS0215,IT,Inżynieria,2,IC,M,zdalnie,2025-02-15,2026-02-22,dobrowolne,tryb i warunki pracy,3,nie
+OS0216,Obsługa klienta,Operacje,4,IC,M,stacjonarnie,2025-06-01,2025-06-18,dobrowolne,zmiana branży,,nie
+OS0217,IT,Inżynieria,5,IC,M,hybrydowo,2025-06-03,2026-01-26,dobrowolne,lepsza oferta finansowa,5,tak
+OS0218,IT,Inżynieria,4,M,M,stacjonarnie,2025-12-20,,,,4,
+OS0219,Logistyka,Operacje,4,IC,M,hybrydowo,2025-05-02,,,,5,
+OS0220,Marketing,Marketing,3,IC,M,zdalnie,2024-11-12,2025-01-16,z inicjatywy firmy,wyniki pracy,,nie
+OS0221,Sprzedaż,Sprzedaż,6,IC,M,hybrydowo,2017-09-26,,,,3,
+OS0222,HR,HR,1,IC,K,zdalnie,2016-04-03,,,,5,
+OS0223,IT,Inżynieria,4,IC,K,zdalnie,2019-11-30,,,,3,
+OS0224,Finanse,Finanse,3,IC,M,hybrydowo,2022-09-14,,,,3,
+OS0225,Logistyka,Operacje,2,IC,M,stacjonarnie,2023-01-12,,,,4,
+OS0226,Sprzedaż,Sprzedaż,2,IC,K,hybrydowo,2026-06-20,,,,,
+OS0227,Sprzedaż,Finanse,4,M,K,hybrydowo,2023-07-02,,,,2,
+OS0228,Marketing,HR,2,IC,K,hybrydowo,2025-09-12,2026-03-16,dobrowolne,brak możliwości rozwoju,2,nie
+OS0229,Obsługa klienta,Operacje,3,IC,M,zdalnie,2022-12-14,2026-01-09,dobrowolne,brak możliwości rozwoju,3,nie
+OS0230,IT,Inżynieria,4,IC,M,hybrydowo,2020-07-27,,,,2,
+OS0231,Obsługa klienta,Inżynieria,5,IC,K,stacjonarnie,2022-09-14,2025-09-30,z inicjatywy firmy,wyniki pracy,2,nie
+OS0232,Logistyka,Operacje,1,IC,M,zdalnie,2023-04-04,,,,3,
+OS0233,Sprzedaż,Finanse,1,IC,K,hybrydowo,2025-05-08,,,,4,
+OS0234,Sprzedaż,Sprzedaż,1,IC,M,zdalnie,2025-11-18,,,,2,
+OS0235,HR,HR,4,IC,K,zdalnie,2018-01-29,2026-09-19,dobrowolne,tryb i warunki pracy,3,nie
+OS0236,Logistyka,Operacje,3,IC,M,hybrydowo,2023-03-25,2024-11-22,dobrowolne,brak możliwości rozwoju,3,nie
+OS0237,Marketing,Marketing,3,IC,K,hybrydowo,2022-11-10,,,,4,
+OS0238,Sprzedaż,Sprzedaż,6,IC,K,hybrydowo,2025-07-03,,,,4,
+OS0239,Sprzedaż,Sprzedaż,6,IC,M,hybrydowo,2024-08-02,,,,3,
+OS0240,Logistyka,Operacje,3,IC,K,hybrydowo,2025-11-24,,,,3,
+OS0241,Sprzedaż,Sprzedaż,3,IC,K,hybrydowo,2026-05-19,,,,,
+OS0242,IT,Marketing,4,IC,M,zdalnie,2023-05-12,2026-07-28,z inicjatywy firmy,redukcja etatu,2,nie
+OS0243,IT,Inżynieria,4,IC,M,zdalnie,2024-07-05,,,,4,
+OS0244,Sprzedaż,Sprzedaż,5,M,K,hybrydowo,2026-09-24,,,,,
+OS0245,Logistyka,Operacje,4,IC,M,stacjonarnie,2015-01-01,,,,4,
+OS0246,IT,Sprzedaż,3,IC,M,hybrydowo,2019-10-26,,,,3,
+OS0247,Obsługa klienta,Operacje,4,IC,M,hybrydowo,2025-03-17,,,,3,
+OS0248,Obsługa klienta,Operacje,5,IC,K,stacjonarnie,2026-07-26,,,,,
+OS0249,Marketing,Marketing,2,IC,K,hybrydowo,2020-02-16,,,,4,
+OS0250,HR,HR,6,IC,M,hybrydowo,2020-12-04,,,,3,
+OS0251,Finanse,Finanse,2,IC,M,stacjonarnie,2017-07-30,,,,3,
+OS0252,Marketing,Marketing,4,IC,M,hybrydowo,2026-02-15,2026-04-15,z inicjatywy firmy,niezaliczony okres próbny,,nie
+OS0253,Sprzedaż,Sprzedaż,3,IC,K,hybrydowo,2025-06-26,2025-08-28,z inicjatywy firmy,wyniki pracy,,nie
+OS0254,Sprzedaż,Operacje,4,IC,M,hybrydowo,2014-06-19,2026-01-06,dobrowolne,powody osobiste,3,nie
+OS0255,IT,Inżynieria,3,IC,K,hybrydowo,2023-11-02,,,,3,
+OS0256,Obsługa klienta,Operacje,5,IC,K,stacjonarnie,2023-07-10,,,,3,
+OS0257,IT,Inżynieria,6,M,M,zdalnie,2014-04-18,,,,4,
+OS0258,IT,Inżynieria,2,IC,K,hybrydowo,2018-10-13,,,,5,
+OS0259,Finanse,Finanse,1,IC,K,hybrydowo,2024-12-31,,,,3,
+OS0260,Marketing,Marketing,5,IC,K,hybrydowo,2022-10-20,,,,3,
+OS0261,HR,HR,4,IC,K,zdalnie,2025-02-06,,,,3,
+OS0262,Logistyka,Operacje,4,IC,K,stacjonarnie,2019-03-29,,,,4,
+OS0263,HR,HR,5,IC,K,hybrydowo,2024-04-12,,,,4,
+OS0264,Finanse,Finanse,1,IC,M,hybrydowo,2016-11-18,,,,3,
+OS0265,Obsługa klienta,Operacje,5,IC,K,stacjonarnie,2022-08-22,,,,3,
+OS0266,Logistyka,Operacje,4,IC,M,stacjonarnie,2025-02-02,2025-09-09,dobrowolne,relacje z przełożonym,4,tak
+OS0267,Marketing,Marketing,6,M,K,zdalnie,2023-10-29,2025-11-09,z inicjatywy firmy,naruszenie zasad,3,nie
+OS0268,Logistyka,Operacje,4,IC,K,stacjonarnie,2023-06-05,2026-06-27,dobrowolne,brak możliwości rozwoju,5,tak
+OS0269,HR,HR,2,IC,K,hybrydowo,2021-06-20,,,,5,
+OS0270,Sprzedaż,Sprzedaż,3,IC,M,hybrydowo,2019-11-11,,,,4,
+OS0271,Finanse,Finanse,5,M,M,hybrydowo,2023-07-09,,,,4,
+OS0272,Finanse,Finanse,1,IC,K,hybrydowo,2022-12-31,,,,4,
+OS0273,IT,Inżynieria,1,IC,K,hybrydowo,2024-11-13,,,,3,
+OS0274,IT,Inżynieria,4,IC,K,hybrydowo,2016-10-19,2026-06-08,dobrowolne,tryb i warunki pracy,3,nie
+OS0275,IT,Inżynieria,2,IC,M,hybrydowo,2023-04-28,2026-02-08,z inicjatywy firmy,wyniki pracy,3,nie
+OS0276,Obsługa klienta,Operacje,5,IC,K,stacjonarnie,2021-11-24,,,,3,
+OS0277,Sprzedaż,HR,2,IC,K,stacjonarnie,2024-07-17,2026-08-22,z inicjatywy firmy,wyniki pracy,1,nie
+OS0278,IT,Inżynieria,4,IC,M,zdalnie,2025-06-08,,,,3,
+OS0279,Obsługa klienta,Operacje,2,IC,M,hybrydowo,2024-09-08,,,,4,
+OS0280,Logistyka,Operacje,3,IC,M,stacjonarnie,2009-10-11,,,,3,
+OS0281,Sprzedaż,Sprzedaż,4,IC,K,hybrydowo,2026-03-19,,,,3,
+OS0282,Logistyka,Operacje,3,IC,M,stacjonarnie,2022-11-19,,,,3,
+OS0283,IT,Inżynieria,1,IC,K,zdalnie,2022-04-13,,,,4,
+OS0284,Obsługa klienta,Operacje,4,IC,M,hybrydowo,2013-01-19,,,,2,
+OS0285,HR,HR,4,IC,K,hybrydowo,2022-08-05,,,,4,
+OS0286,Logistyka,Operacje,6,IC,M,stacjonarnie,2024-01-02,,,,4,
+OS0287,Sprzedaż,Sprzedaż,1,IC,K,zdalnie,2026-03-31,,,,3,
+OS0288,Marketing,Marketing,6,IC,K,zdalnie,2022-02-26,,,,5,
+OS0289,Logistyka,Operacje,2,IC,M,stacjonarnie,2025-01-24,2026-02-17,dobrowolne,tryb i warunki pracy,3,nie
+OS0290,IT,Inżynieria,2,IC,M,zdalnie,2025-01-12,,,,3,
+OS0291,IT,Inżynieria,1,IC,M,zdalnie,2026-03-08,,,,3,
+OS0292,Sprzedaż,Sprzedaż,3,IC,K,stacjonarnie,2018-08-21,,,,4,
+OS0293,Sprzedaż,Sprzedaż,1,IC,M,hybrydowo,2022-10-23,2025-04-28,dobrowolne,brak możliwości rozwoju,4,tak
+OS0294,Sprzedaż,Sprzedaż,1,IC,M,hybrydowo,2021-02-12,,,,4,
+OS0295,IT,Inżynieria,4,IC,M,hybrydowo,2009-10-11,,,,5,
+OS0296,Obsługa klienta,Operacje,1,IC,K,stacjonarnie,2025-05-20,2025-10-16,z inicjatywy firmy,naruszenie zasad,,nie
+OS0297,Finanse,Finanse,3,IC,K,hybrydowo,2023-01-23,,,,4,
+OS0298,IT,Inżynieria,1,IC,M,zdalnie,2026-04-10,2026-10-24,z inicjatywy firmy,wyniki pracy,2,nie
+OS0299,HR,HR,2,IC,K,hybrydowo,2020-12-08,,,,4,
+OS0300,Obsługa klienta,Operacje,3,IC,K,hybrydowo,2022-03-04,,,,2,
+OS0301,Logistyka,Operacje,4,IC,K,stacjonarnie,2026-06-07,2026-10-30,z inicjatywy firmy,wyniki pracy,,nie
+OS0302,IT,Inżynieria,3,IC,K,stacjonarnie,2021-03-27,2026-02-24,dobrowolne,tryb i warunki pracy,5,tak
+OS0303,Sprzedaż,Sprzedaż,2,IC,M,hybrydowo,2018-11-14,,,,3,
+OS0304,Obsługa klienta,Operacje,4,IC,K,stacjonarnie,2026-09-29,,,,,
+OS0305,Obsługa klienta,Operacje,2,IC,K,hybrydowo,2026-04-23,,,,3,
+OS0306,Logistyka,Finanse,1,IC,K,hybrydowo,2025-04-11,,,,3,
+OS0307,Sprzedaż,Sprzedaż,3,IC,K,zdalnie,2020-09-05,,,,4,
+OS0308,IT,Inżynieria,1,IC,M,hybrydowo,2025-06-25,,,,3,
+OS0309,IT,Inżynieria,5,M,K,hybrydowo,2021-05-22,,,,4,
+OS0310,Marketing,HR,2,IC,M,hybrydowo,2021-08-20,2024-11-04,z inicjatywy firmy,redukcja etatu,2,nie
+OS0311,Logistyka,Operacje,5,M,M,stacjonarnie,2018-11-05,,,,4,
+OS0312,Obsługa klienta,Inżynieria,4,IC,M,hybrydowo,2024-07-15,,,,1,
+OS0313,Marketing,Finanse,4,IC,M,stacjonarnie,2026-07-14,,,,,
+OS0314,Obsługa klienta,Operacje,4,IC,K,stacjonarnie,2015-06-20,,,,5,
+OS0315,Finanse,Finanse,2,IC,M,zdalnie,2022-09-29,,,,3,
+OS0316,Obsługa klienta,Operacje,3,IC,K,hybrydowo,2015-03-05,,,,2,
+OS0317,Logistyka,Operacje,2,IC,M,stacjonarnie,2025-03-10,2026-10-23,dobrowolne,tryb i warunki pracy,5,nie
+OS0318,Finanse,Finanse,2,IC,M,hybrydowo,2026-08-06,,,,,
+OS0319,Sprzedaż,Sprzedaż,3,IC,M,zdalnie,2018-01-07,2024-11-15,dobrowolne,brak możliwości rozwoju,4,tak
+OS0320,IT,Inżynieria,5,IC,M,hybrydowo,2026-02-20,,,,2,
+OS0321,Obsługa klienta,Operacje,2,IC,K,stacjonarnie,2017-08-21,2025-06-06,z inicjatywy firmy,redukcja etatu,2,nie
+OS0322,Logistyka,Operacje,1,IC,M,hybrydowo,2026-05-16,,,,,
+OS0323,Logistyka,Operacje,2,IC,M,stacjonarnie,2025-03-05,,,,3,
+OS0324,Obsługa klienta,Operacje,2,IC,M,stacjonarnie,2023-06-15,2026-08-19,dobrowolne,lepsza oferta finansowa,4,tak
+OS0325,IT,Inżynieria,4,M,M,hybrydowo,2022-05-18,,,,2,
+OS0326,Sprzedaż,Operacje,3,IC,M,stacjonarnie,2025-08-04,2025-10-18,dobrowolne,lepsza oferta finansowa,,nie
+OS0327,Sprzedaż,Sprzedaż,2,IC,K,hybrydowo,2025-12-10,2026-07-08,dobrowolne,powody osobiste,3,nie
+OS0328,Obsługa klienta,Operacje,3,IC,K,stacjonarnie,2021-12-29,,,,3,
+OS0329,Obsługa klienta,Operacje,5,M,K,hybrydowo,2024-03-18,2026-01-28,dobrowolne,lepsza oferta finansowa,3,nie
+OS0330,Marketing,Inżynieria,3,IC,M,zdalnie,2022-10-21,,,,3,
+OS0331,Sprzedaż,Sprzedaż,2,IC,M,hybrydowo,2021-07-01,,,,4,
+OS0332,Marketing,Marketing,6,IC,M,hybrydowo,2023-09-06,,,,4,
+OS0333,Obsługa klienta,Sprzedaż,3,IC,K,stacjonarnie,2018-08-24,,,,3,
+OS0334,Logistyka,Operacje,6,IC,M,stacjonarnie,2026-04-14,,,,4,
+OS0335,Marketing,Marketing,4,IC,K,hybrydowo,2021-08-12,,,,3,
+OS0336,IT,Inżynieria,2,IC,M,zdalnie,2022-10-26,2025-10-14,dobrowolne,zmiana branży,3,nie
+OS0337,Logistyka,Operacje,2,IC,M,hybrydowo,2024-07-01,,,,3,
+OS0338,Obsługa klienta,Finanse,2,IC,M,stacjonarnie,2021-03-06,,,,4,
+OS0339,Sprzedaż,Sprzedaż,5,IC,M,hybrydowo,2022-01-19,,,,4,
+OS0340,Sprzedaż,Sprzedaż,4,IC,K,hybrydowo,2025-04-11,,,,4,
+OS0341,HR,HR,5,IC,K,hybrydowo,2026-01-20,,,,4,
+OS0342,Finanse,Finanse,3,IC,K,hybrydowo,2022-03-31,,,,2,
+OS0343,Finanse,Finanse,4,M,K,zdalnie,2026-03-16,2026-05-23,dobrowolne,powody osobiste,,nie
+OS0344,Sprzedaż,Sprzedaż,3,IC,K,hybrydowo,2024-04-28,,,,3,
+OS0345,Obsługa klienta,Operacje,1,IC,K,hybrydowo,2023-02-07,,,,4,
+OS0346,Obsługa klienta,Operacje,3,IC,K,stacjonarnie,2023-03-01,,,,4,
+OS0347,Sprzedaż,Sprzedaż,2,IC,M,hybrydowo,2020-12-29,,,,2,
+OS0348,Finanse,Finanse,4,IC,M,hybrydowo,2025-09-19,,,,3,
+OS0349,Logistyka,Operacje,4,M,M,stacjonarnie,2025-10-21,,,,3,
+OS0350,HR,HR,6,IC,K,hybrydowo,2026-01-28,,,,2,
+OS0351,HR,HR,4,IC,K,hybrydowo,2020-01-09,,,,3,
+OS0352,IT,Inżynieria,3,IC,M,hybrydowo,2025-07-12,,,,3,
+OS0353,IT,Inżynieria,4,IC,M,zdalnie,2023-11-06,,,,3,
+OS0354,Obsługa klienta,Operacje,1,IC,K,stacjonarnie,2020-08-26,,,,3,
+OS0355,Sprzedaż,Sprzedaż,4,IC,M,stacjonarnie,2021-06-08,,,,3,
+OS0356,Obsługa klienta,Operacje,1,IC,K,stacjonarnie,2026-04-23,,,,3,
+OS0357,HR,HR,2,IC,M,hybrydowo,2017-07-31,,,,4,
+OS0358,IT,Operacje,1,IC,M,zdalnie,2024-11-17,2025-06-14,dobrowolne,brak możliwości rozwoju,3,nie
+OS0359,IT,Inżynieria,1,IC,M,zdalnie,2025-04-19,,,,4,
+OS0360,Marketing,Marketing,3,IC,K,hybrydowo,2022-10-16,,,,2,
+OS0361,Obsługa klienta,HR,3,IC,K,stacjonarnie,2022-05-22,,,,3,
+OS0362,Sprzedaż,Sprzedaż,4,IC,K,hybrydowo,2023-01-29,,,,3,
+OS0363,Marketing,Marketing,3,IC,M,stacjonarnie,2025-04-06,,,,3,
+OS0364,Sprzedaż,Inżynieria,1,IC,M,hybrydowo,2022-09-27,,,,4,
+OS0365,Sprzedaż,Sprzedaż,6,IC,K,hybrydowo,2025-06-06,,,,3,
+OS0366,Sprzedaż,Sprzedaż,4,IC,M,zdalnie,2019-08-11,,,,2,
+OS0367,IT,Inżynieria,1,IC,K,zdalnie,2026-07-17,,,,,
+OS0368,HR,HR,1,IC,K,hybrydowo,2021-02-21,,,,4,
+OS0369,Obsługa klienta,Operacje,1,IC,M,stacjonarnie,2025-11-27,,,,3,
+OS0370,Logistyka,Operacje,4,IC,M,stacjonarnie,2023-06-11,2025-01-18,z inicjatywy firmy,wyniki pracy,1,nie
+OS0371,Obsługa klienta,Operacje,7,M,K,hybrydowo,2022-11-01,,,,3,
+OS0372,Sprzedaż,Sprzedaż,1,IC,M,zdalnie,2018-12-08,,,,5,
+OS0373,Finanse,Finanse,4,IC,K,stacjonarnie,2023-09-05,,,,2,
+OS0374,Logistyka,Operacje,5,IC,M,stacjonarnie,2024-09-11,,,,3,
+OS0375,HR,HR,1,IC,K,hybrydowo,2022-09-25,,,,3,
+OS0376,HR,Marketing,4,IC,M,hybrydowo,2021-07-02,,,,4,
+OS0377,HR,HR,4,IC,K,hybrydowo,2019-05-01,,,,3,
+OS0378,Marketing,Marketing,5,IC,M,hybrydowo,2023-11-22,2025-09-27,z inicjatywy firmy,redukcja etatu,2,nie
+OS0379,Logistyka,Operacje,3,IC,K,stacjonarnie,2026-03-22,,,,3,
+OS0380,Sprzedaż,Sprzedaż,3,IC,M,hybrydowo,2016-08-27,2026-04-22,z inicjatywy firmy,redukcja etatu,3,nie
+OS0381,Obsługa klienta,Operacje,4,M,K,hybrydowo,2025-08-01,,,,4,
+OS0382,Obsługa klienta,Operacje,1,IC,M,hybrydowo,2023-11-22,,,,4,
+OS0383,Marketing,Marketing,3,IC,M,hybrydowo,2019-02-18,,,,3,
+OS0384,Obsługa klienta,Operacje,3,IC,K,hybrydowo,2025-02-21,2026-01-19,dobrowolne,brak możliwości rozwoju,2,nie
+OS0385,Logistyka,Operacje,3,IC,M,stacjonarnie,2024-11-07,,,,3,
+OS0386,Obsługa klienta,Operacje,4,IC,K,stacjonarnie,2025-06-28,,,,4,
+OS0387,Obsługa klienta,Inżynieria,4,IC,M,stacjonarnie,2022-08-01,,,,4,
+OS0388,IT,Inżynieria,1,IC,M,hybrydowo,2022-08-04,,,,2,
+OS0389,Logistyka,Operacje,4,IC,M,stacjonarnie,2022-04-08,,,,3,
+OS0390,Sprzedaż,Sprzedaż,3,IC,K,zdalnie,2021-06-14,,,,4,
+OS0391,IT,Inżynieria,2,IC,M,hybrydowo,2021-09-01,,,,4,
+OS0392,Obsługa klienta,Operacje,3,IC,K,hybrydowo,2025-10-24,2026-07-30,dobrowolne,lepsza oferta finansowa,3,tak
+OS0393,Logistyka,Operacje,3,M,M,stacjonarnie,2018-07-18,,,,4,
+OS0394,Obsługa klienta,Marketing,5,IC,K,hybrydowo,2023-01-11,,,,4,
+OS0395,Obsługa klienta,Finanse,2,IC,M,stacjonarnie,2019-07-21,,,,4,
+OS0396,Sprzedaż,Sprzedaż,1,IC,K,stacjonarnie,2009-10-11,2025-02-01,dobrowolne,lepsza oferta finansowa,2,nie
+OS0397,IT,Inżynieria,3,IC,M,hybrydowo,2025-12-14,2026-05-30,dobrowolne,brak możliwości rozwoju,,nie
+OS0398,Marketing,Marketing,6,IC,M,hybrydowo,2019-03-03,,,,2,
+OS0399,IT,Inżynieria,2,IC,M,hybrydowo,2025-06-12,,,,2,
+OS0400,IT,Inżynieria,2,IC,M,zdalnie,2026-08-08,,,,,
+OS0401,Sprzedaż,Sprzedaż,2,IC,M,hybrydowo,2021-12-13,,,,3,
+OS0402,Obsługa klienta,Operacje,1,IC,K,stacjonarnie,2026-09-08,,,,,
+OS0403,Sprzedaż,Sprzedaż,3,IC,M,hybrydowo,2020-11-11,2025-09-01,dobrowolne,powody osobiste,5,nie
+OS0404,Finanse,Finanse,1,IC,M,hybrydowo,2022-03-22,2024-11-16,dobrowolne,brak możliwości rozwoju,3,nie
+OS0405,Obsługa klienta,Operacje,3,IC,M,stacjonarnie,2026-02-15,,,,3,
+OS0406,Obsługa klienta,Operacje,2,IC,K,hybrydowo,2020-06-25,,,,3,
+OS0407,Obsługa klienta,Operacje,6,M,M,stacjonarnie,2025-10-10,,,,4,
+OS0408,Sprzedaż,Sprzedaż,1,IC,K,zdalnie,2021-10-31,,,,4,
+OS0409,Sprzedaż,Sprzedaż,5,IC,K,hybrydowo,2019-04-26,2025-01-07,dobrowolne,brak możliwości rozwoju,5,nie
+OS0410,Sprzedaż,Sprzedaż,3,IC,K,hybrydowo,2022-12-25,,,,3,
+OS0411,Sprzedaż,Sprzedaż,3,IC,K,zdalnie,2024-12-30,2025-01-28,z inicjatywy firmy,niezaliczony okres próbny,,nie
+OS0412,Obsługa klienta,Operacje,5,IC,K,zdalnie,2025-03-20,,,,3,
+OS0413,Obsługa klienta,Operacje,3,IC,K,stacjonarnie,2023-11-07,2025-09-11,dobrowolne,lepsza oferta finansowa,2,nie
+OS0414,IT,Finanse,4,M,M,hybrydowo,2022-08-10,2025-08-14,dobrowolne,brak możliwości rozwoju,4,tak
+OS0415,HR,HR,2,IC,K,hybrydowo,2014-12-10,,,,2,
+OS0416,HR,HR,5,IC,K,hybrydowo,2018-11-28,,,,3,
+OS0417,Obsługa klienta,Operacje,4,IC,K,hybrydowo,2025-06-01,,,,4,
+OS0418,IT,Inżynieria,1,IC,K,zdalnie,2023-06-12,,,,4,
+OS0419,IT,Inżynieria,7,M,M,zdalnie,2014-05-11,,,,3,
+OS0420,Logistyka,Operacje,4,IC,K,hybrydowo,2019-04-26,,,,2,
+OS0421,Finanse,Finanse,4,M,K,hybrydowo,2017-11-15,,,,2,
+OS0422,Obsługa klienta,Operacje,3,IC,M,stacjonarnie,2025-11-22,,,,3,
+OS0423,Sprzedaż,Sprzedaż,3,IC,K,hybrydowo,2026-02-24,,,,3,
+OS0424,IT,Inżynieria,5,IC,M,zdalnie,2024-02-19,,,,4,
+OS0425,IT,Inżynieria,4,IC,M,zdalnie,2024-11-08,,,,3,
+OS0426,IT,Inżynieria,2,IC,M,zdalnie,2017-02-26,,,,4,
+OS0427,Logistyka,Operacje,3,IC,M,hybrydowo,2016-04-07,,,,3,
+OS0428,Sprzedaż,Sprzedaż,3,IC,M,zdalnie,2020-12-19,2026-09-02,z inicjatywy firmy,wyniki pracy,2,nie
+OS0429,Sprzedaż,Sprzedaż,3,IC,K,hybrydowo,2023-05-10,,,,3,
+OS0430,IT,Inżynieria,1,IC,K,hybrydowo,2024-12-28,,,,3,
+OS0431,Obsługa klienta,Operacje,3,IC,K,hybrydowo,2026-03-29,,,,3,
+OS0432,IT,Inżynieria,3,IC,M,hybrydowo,2023-10-05,,,,4,
+OS0433,Sprzedaż,Sprzedaż,3,IC,K,zdalnie,2025-03-18,,,,4,
+OS0434,Marketing,Inżynieria,3,IC,K,hybrydowo,2016-09-08,2025-06-18,dobrowolne,lepsza oferta finansowa,4,tak
+OS0435,Finanse,Finanse,2,IC,K,hybrydowo,2019-05-28,,,,2,
+OS0436,Logistyka,Operacje,5,IC,M,zdalnie,2025-10-24,,,,4,
+OS0437,Obsługa klienta,Operacje,1,IC,M,hybrydowo,2026-03-17,,,,3,
+OS0438,Obsługa klienta,Operacje,3,IC,M,stacjonarnie,2022-07-07,,,,4,
+OS0439,HR,Inżynieria,3,IC,K,hybrydowo,2025-09-14,2025-10-27,z inicjatywy firmy,niezaliczony okres próbny,,nie
+OS0440,Marketing,Marketing,2,IC,K,hybrydowo,2025-07-04,,,,3,
+OS0441,Obsługa klienta,Operacje,1,IC,K,hybrydowo,2026-09-04,,,,,
+OS0442,Sprzedaż,Sprzedaż,3,IC,K,zdalnie,2015-12-14,,,,4,
+OS0443,IT,Inżynieria,1,IC,M,hybrydowo,2021-08-02,,,,4,
+OS0444,Marketing,Operacje,5,IC,M,hybrydowo,2025-12-03,,,,3,
+OS0445,Sprzedaż,Sprzedaż,2,IC,K,stacjonarnie,2026-03-01,,,,3,
+OS0446,Sprzedaż,Sprzedaż,2,IC,M,hybrydowo,2021-02-10,,,,4,
+OS0447,Logistyka,Operacje,4,IC,K,stacjonarnie,2025-07-29,2025-08-03,dobrowolne,relacje z przełożonym,,tak
+OS0448,IT,Inżynieria,3,IC,M,hybrydowo,2024-07-31,,,,3,
+OS0449,Sprzedaż,Inżynieria,4,IC,M,hybrydowo,2025-07-14,,,,4,
+OS0450,Logistyka,Operacje,3,IC,K,hybrydowo,2026-06-01,,,,,
+OS0451,Sprzedaż,Sprzedaż,3,IC,K,hybrydowo,2023-04-21,,,,3,
+OS0452,IT,Inżynieria,3,IC,K,hybrydowo,2024-11-20,,,,3,
+OS0453,Obsługa klienta,Operacje,5,IC,M,stacjonarnie,2026-10-01,,,,,
+OS0454,Sprzedaż,Sprzedaż,1,IC,M,hybrydowo,2025-08-19,,,,2,
+OS0455,Obsługa klienta,Operacje,3,IC,K,hybrydowo,2022-08-09,,,,2,
+OS0456,IT,Inżynieria,2,IC,M,zdalnie,2019-03-12,,,,4,
+OS0457,Marketing,Marketing,4,IC,K,hybrydowo,2025-04-20,2025-10-02,dobrowolne,zmiana branży,,tak
+OS0458,Obsługa klienta,Operacje,5,IC,M,zdalnie,2022-05-03,,,,3,
+OS0459,Obsługa klienta,Operacje,3,IC,M,stacjonarnie,2024-03-21,2026-10-30,dobrowolne,tryb i warunki pracy,4,tak
+OS0460,Logistyka,Operacje,3,IC,M,stacjonarnie,2024-01-01,,,,5,
+OS0461,Obsługa klienta,Operacje,1,IC,K,stacjonarnie,2026-05-21,,,,,
+OS0462,Obsługa klienta,HR,4,IC,K,hybrydowo,2019-07-27,,,,4,
+OS0463,IT,Inżynieria,3,IC,M,hybrydowo,2021-05-14,,,,3,
+OS0464,Obsługa klienta,Operacje,4,IC,K,hybrydowo,2014-12-27,,,,4,
+OS0465,Sprzedaż,Sprzedaż,3,IC,K,hybrydowo,2024-08-15,2024-11-25,z inicjatywy firmy,wyniki pracy,,nie
+OS0466,Obsługa klienta,Operacje,2,IC,M,stacjonarnie,2019-04-25,,,,3,
+OS0467,IT,Inżynieria,5,IC,M,hybrydowo,2022-11-08,,,,3,
+OS0468,Logistyka,Operacje,4,IC,M,stacjonarnie,2017-04-12,2026-10-31,dobrowolne,lepsza oferta finansowa,4,tak
+OS0469,IT,Inżynieria,3,IC,K,zdalnie,2025-03-03,,,,3,
+OS0470,Obsługa klienta,Finanse,4,M,M,stacjonarnie,2019-10-29,,,,2,
+OS0471,IT,Inżynieria,3,IC,M,zdalnie,2026-06-02,,,,,
+OS0472,IT,Inżynieria,6,IC,K,zdalnie,2023-07-29,,,,3,
+OS0473,HR,HR,5,IC,K,hybrydowo,2026-01-06,,,,3,
+OS0474,Sprzedaż,Sprzedaż,2,IC,K,stacjonarnie,2023-06-03,2025-06-03,dobrowolne,powody osobiste,4,nie
+OS0475,Obsługa klienta,Operacje,1,IC,M,hybrydowo,2025-12-01,,,,3,
+OS0476,Logistyka,Operacje,5,M,K,zdalnie,2023-03-19,,,,3,
+OS0477,IT,Inżynieria,3,M,M,zdalnie,2023-02-15,,,,4,
+OS0478,Obsługa klienta,Operacje,2,IC,M,hybrydowo,2022-09-29,,,,3,
+OS0479,Sprzedaż,Sprzedaż,1,IC,M,hybrydowo,2022-04-30,,,,4,
+OS0480,Obsługa klienta,Operacje,3,IC,M,stacjonarnie,2025-11-27,,,,3,
+OS0481,Obsługa klienta,Operacje,5,IC,M,hybrydowo,2023-03-03,,,,5,
+OS0482,Logistyka,Operacje,2,IC,M,stacjonarnie,2016-08-01,,,,1,
+OS0483,Sprzedaż,Sprzedaż,6,M,K,hybrydowo,2025-10-24,,,,3,
+OS0484,Finanse,Finanse,4,IC,K,zdalnie,2026-09-30,,,,,
+OS0485,Sprzedaż,Sprzedaż,4,IC,K,hybrydowo,2020-04-06,,,,4,
+OS0486,IT,Inżynieria,3,IC,M,hybrydowo,2026-10-08,,,,,
+OS0487,Obsługa klienta,Operacje,1,IC,K,zdalnie,2023-05-09,2024-12-03,dobrowolne,powody osobiste,5,tak
+OS0488,Logistyka,Operacje,6,IC,M,stacjonarnie,2020-08-16,,,,4,
+OS0489,Obsługa klienta,Sprzedaż,4,IC,M,hybrydowo,2020-01-07,,,,3,
+OS0490,Sprzedaż,Sprzedaż,2,IC,M,zdalnie,2022-06-17,,,,3,
+OS0491,Obsługa klienta,Operacje,4,IC,K,hybrydowo,2026-10-01,,,,,
+OS0492,IT,Inżynieria,1,IC,K,stacjonarnie,2022-10-18,,,,4,
+OS0493,Logistyka,Operacje,1,IC,M,zdalnie,2021-10-17,2025-12-03,dobrowolne,lepsza oferta finansowa,3,nie
+OS0494,Logistyka,Operacje,2,IC,M,stacjonarnie,2026-09-03,,,,,
+OS0495,IT,Inżynieria,3,IC,K,zdalnie,2025-04-09,,,,3,
+OS0496,Logistyka,Operacje,5,IC,M,stacjonarnie,2022-10-24,2025-02-21,z inicjatywy firmy,wyniki pracy,3,nie
+OS0497,Logistyka,Operacje,3,IC,M,zdalnie,2022-06-16,,,,3,
+OS0498,Obsługa klienta,Operacje,3,IC,K,stacjonarnie,2021-06-12,,,,4,
+OS0499,Sprzedaż,Sprzedaż,3,IC,K,hybrydowo,2023-11-07,,,,5,
+OS0500,IT,Inżynieria,3,IC,M,zdalnie,2022-03-31,,,,4,
+OS0501,Marketing,Marketing,5,IC,K,hybrydowo,2019-11-06,,,,5,
+OS0502,IT,Inżynieria,3,IC,M,hybrydowo,2023-10-10,,,,3,
+OS0503,Logistyka,Operacje,2,IC,M,stacjonarnie,2021-04-22,,,,2,
+OS0504,Obsługa klienta,Operacje,3,M,M,stacjonarnie,2025-03-06,,,,3,
+OS0505,HR,HR,4,IC,M,hybrydowo,2022-05-02,,,,3,
+OS0506,Logistyka,Operacje,2,IC,K,stacjonarnie,2022-07-23,,,,1,
+OS0507,Sprzedaż,Sprzedaż,2,IC,M,hybrydowo,2021-05-01,,,,3,
+OS0508,HR,Operacje,3,IC,K,hybrydowo,2020-01-28,,,,4,
+OS0509,Logistyka,Operacje,5,IC,M,hybrydowo,2026-05-20,,,,,
+OS0510,Logistyka,Finanse,4,IC,M,stacjonarnie,2021-04-01,,,,4,
+OS0511,Obsługa klienta,HR,4,IC,K,hybrydowo,2025-06-19,,,,2,
+OS0512,IT,Marketing,5,M,K,hybrydowo,2023-07-01,,,,3,
+OS0513,Sprzedaż,Sprzedaż,3,IC,M,hybrydowo,2022-09-19,,,,5,
+OS0514,IT,Inżynieria,3,IC,K,hybrydowo,2023-07-13,2025-09-23,dobrowolne,lepsza oferta finansowa,3,nie
+OS0515,IT,Inżynieria,3,IC,M,zdalnie,2026-02-09,,,,2,
+OS0516,Finanse,Finanse,1,IC,K,zdalnie,2022-08-12,2025-12-22,z inicjatywy firmy,redukcja etatu,3,nie
+OS0517,Obsługa klienta,Operacje,3,IC,M,stacjonarnie,2022-06-03,,,,2,
+OS0518,Logistyka,Operacje,3,M,M,stacjonarnie,2021-06-06,,,,4,
+OS0519,HR,HR,1,IC,K,hybrydowo,2026-09-20,,,,,
+OS0520,Obsługa klienta,Sprzedaż,4,IC,K,stacjonarnie,2021-12-13,2025-09-02,dobrowolne,brak możliwości rozwoju,4,nie
+OS0521,Obsługa klienta,Operacje,2,IC,M,stacjonarnie,2020-10-21,,,,3,
+OS0522,Obsługa klienta,Operacje,2,IC,K,stacjonarnie,2022-04-28,,,,4,
+OS0523,Obsługa klienta,Operacje,2,IC,K,stacjonarnie,2021-02-01,,,,3,
+OS0524,IT,Inżynieria,5,IC,M,zdalnie,2018-06-04,,,,3,
+OS0525,Obsługa klienta,Operacje,2,IC,M,stacjonarnie,2018-05-09,,,,5,
+OS0526,Logistyka,Operacje,4,IC,M,hybrydowo,2025-06-29,,,,3,
+OS0527,Obsługa klienta,Operacje,4,IC,M,stacjonarnie,2025-02-28,,,,3,
+OS0528,Sprzedaż,Sprzedaż,4,IC,M,zdalnie,2019-01-13,,,,3,
+OS0529,IT,Inżynieria,2,IC,M,zdalnie,2024-05-06,,,,4,
+OS0530,Obsługa klienta,Operacje,1,IC,K,hybrydowo,2025-04-22,,,,4,
+OS0531,HR,HR,3,IC,M,hybrydowo,2025-05-14,2026-03-02,z inicjatywy firmy,wyniki pracy,2,nie
+OS0532,Obsługa klienta,Operacje,2,IC,K,zdalnie,2025-09-09,,,,4,
+OS0533,Logistyka,Operacje,3,IC,M,hybrydowo,2023-08-11,,,,4,
+OS0534,IT,Inżynieria,2,IC,M,hybrydowo,2024-11-18,,,,4,
+OS0535,IT,Inżynieria,2,IC,M,hybrydowo,2023-05-15,,,,4,
+OS0536,HR,HR,5,IC,K,hybrydowo,2017-03-20,,,,4,
+OS0537,HR,HR,6,IC,K,hybrydowo,2025-03-04,,,,4,
+OS0538,IT,Inżynieria,5,IC,M,zdalnie,2025-09-14,2026-02-03,dobrowolne,relacje z przełożonym,,nie
+OS0539,Sprzedaż,Sprzedaż,4,IC,K,hybrydowo,2020-12-23,2024-11-01,z inicjatywy firmy,naruszenie zasad,2,nie
+OS0540,HR,HR,5,M,K,stacjonarnie,2023-08-13,2025-12-30,dobrowolne,tryb i warunki pracy,2,nie
+OS0541,Logistyka,Operacje,4,M,M,hybrydowo,2021-05-09,,,,3,
+OS0542,IT,Inżynieria,3,IC,M,stacjonarnie,2026-09-06,,,,,
+OS0543,Finanse,Finanse,3,IC,M,hybrydowo,2025-06-11,,,,4,
+OS0544,Marketing,Marketing,3,IC,K,hybrydowo,2026-08-17,,,,,
+OS0545,Logistyka,Operacje,4,IC,K,hybrydowo,2026-02-25,,,,4,
+OS0546,IT,Inżynieria,4,IC,K,zdalnie,2023-03-12,,,,3,
+OS0547,IT,Inżynieria,3,IC,M,zdalnie,2023-10-08,,,,2,
+OS0548,Obsługa klienta,Operacje,2,IC,M,stacjonarnie,2022-08-20,,,,4,
+OS0549,Finanse,Finanse,1,IC,K,stacjonarnie,2022-02-06,2025-03-07,dobrowolne,tryb i warunki pracy,2,nie
+OS0550,Logistyka,Operacje,5,IC,K,stacjonarnie,2020-12-13,,,,3,
+OS0551,Obsługa klienta,Operacje,3,IC,K,hybrydowo,2024-12-26,,,,5,
+OS0552,Sprzedaż,Sprzedaż,3,IC,M,hybrydowo,2026-02-17,,,,3,
+OS0553,IT,Inżynieria,1,IC,M,zdalnie,2024-11-11,2026-04-17,dobrowolne,zmiana branży,3,tak
+OS0554,Sprzedaż,Sprzedaż,4,IC,K,stacjonarnie,2020-04-17,,,,3,
+OS0555,Finanse,Finanse,6,M,K,zdalnie,2025-08-06,,,,4,
+OS0556,Logistyka,Sprzedaż,4,IC,M,hybrydowo,2023-02-27,2025-08-03,z inicjatywy firmy,redukcja etatu,2,nie
+OS0557,Obsługa klienta,Operacje,4,IC,K,stacjonarnie,2017-06-25,2026-05-25,dobrowolne,relacje z przełożonym,3,nie
+OS0558,Sprzedaż,Sprzedaż,1,IC,M,hybrydowo,2020-09-25,,,,2,
+OS0559,Logistyka,Operacje,3,IC,M,hybrydowo,2026-09-23,,,,,
+OS0560,Sprzedaż,Sprzedaż,2,IC,M,zdalnie,2019-12-09,,,,4,
+OS0561,Obsługa klienta,Operacje,3,IC,K,hybrydowo,2025-07-31,,,,5,
+OS0562,Sprzedaż,Inżynieria,5,IC,K,hybrydowo,2025-10-15,,,,3,
+OS0563,Sprzedaż,Sprzedaż,1,IC,K,zdalnie,2025-11-23,,,,3,
+OS0564,Obsługa klienta,Operacje,5,M,M,hybrydowo,2026-04-04,,,,3,
+OS0565,Obsługa klienta,Operacje,4,IC,M,stacjonarnie,2025-06-01,,,,4,
+OS0566,Sprzedaż,Operacje,5,IC,M,stacjonarnie,2025-05-03,,,,5,
+OS0567,Logistyka,Operacje,2,IC,K,hybrydowo,2018-06-21,,,,3,
+OS0568,IT,Inżynieria,1,IC,M,zdalnie,2026-06-28,,,,,
+OS0569,Logistyka,Operacje,3,IC,M,stacjonarnie,2021-01-07,,,,3,
+OS0570,Marketing,Marketing,3,IC,K,hybrydowo,2021-04-20,,,,4,
+OS0571,Logistyka,Operacje,3,IC,M,stacjonarnie,2025-01-07,,,,4,
+OS0572,Obsługa klienta,Operacje,4,IC,M,stacjonarnie,2024-05-31,2025-05-21,dobrowolne,brak możliwości rozwoju,4,tak
+OS0573,Obsługa klienta,Operacje,4,IC,M,stacjonarnie,2026-06-18,,,,,
+OS0574,Obsługa klienta,HR,3,IC,K,hybrydowo,2024-07-27,,,,3,
+OS0575,Marketing,Marketing,2,IC,M,hybrydowo,2022-01-25,,,,3,
+OS0576,Logistyka,Operacje,4,IC,M,stacjonarnie,2024-12-02,,,,3,
+OS0577,Logistyka,Operacje,2,IC,M,stacjonarnie,2025-11-04,2026-01-16,z inicjatywy firmy,wyniki pracy,,nie
+OS0578,Logistyka,Operacje,3,IC,K,hybrydowo,2024-11-25,,,,3,
+OS0579,Obsługa klienta,Operacje,5,IC,K,stacjonarnie,2014-01-31,,,,3,
+OS0580,Sprzedaż,Sprzedaż,3,IC,M,zdalnie,2022-12-11,,,,5,
+OS0581,IT,Inżynieria,2,IC,M,hybrydowo,2026-02-21,,,,3,
+OS0582,IT,Inżynieria,2,IC,K,hybrydowo,2020-10-15,,,,3,
+OS0583,HR,HR,4,M,K,hybrydowo,2026-08-09,,,,,
+OS0584,Sprzedaż,Sprzedaż,4,IC,M,hybrydowo,2025-04-26,,,,2,
+OS0585,IT,Inżynieria,4,IC,M,zdalnie,2017-07-17,2024-11-07,dobrowolne,brak możliwości rozwoju,4,tak
+OS0586,HR,HR,5,IC,K,zdalnie,2025-05-11,,,,3,
+OS0587,Logistyka,Operacje,3,IC,M,stacjonarnie,2023-11-27,,,,3,
+OS0588,Obsługa klienta,Operacje,4,M,M,stacjonarnie,2015-06-16,,,,5,
+OS0589,IT,Inżynieria,3,IC,K,zdalnie,2023-10-02,,,,5,
+OS0590,Sprzedaż,Sprzedaż,4,IC,M,hybrydowo,2019-04-23,,,,4,
+OS0591,IT,Inżynieria,4,M,M,hybrydowo,2017-09-29,,,,2,
+OS0592,IT,Inżynieria,4,IC,K,zdalnie,2021-07-23,,,,4,
+OS0593,Marketing,Marketing,2,IC,M,zdalnie,2025-02-09,,,,3,
+OS0594,Logistyka,Operacje,4,M,M,hybrydowo,2017-06-22,,,,3,
+OS0595,Finanse,Inżynieria,3,IC,K,stacjonarnie,2023-09-16,,,,5,
+OS0596,Finanse,Finanse,4,IC,K,hybrydowo,2018-11-11,,,,4,
+OS0597,Logistyka,Operacje,2,IC,M,hybrydowo,2019-01-10,,,,3,
+OS0598,IT,Inżynieria,5,M,M,hybrydowo,2021-12-24,2025-05-02,z inicjatywy firmy,wyniki pracy,2,nie
+OS0599,IT,Inżynieria,5,IC,M,zdalnie,2024-12-02,,,,4,
+OS0600,Logistyka,Operacje,4,IC,K,stacjonarnie,2015-06-16,,,,3,
+OS0601,Marketing,Marketing,2,IC,K,stacjonarnie,2026-08-15,,,,,
+OS0602,Sprzedaż,Sprzedaż,3,IC,M,stacjonarnie,2025-01-22,,,,3,
+OS0603,Logistyka,Operacje,4,IC,M,hybrydowo,2025-06-25,,,,3,
+OS0604,IT,Inżynieria,4,IC,M,zdalnie,2023-07-07,,,,5,
+OS0605,Obsługa klienta,Operacje,3,IC,K,hybrydowo,2010-04-16,2025-01-29,dobrowolne,brak możliwości rozwoju,3,nie
+OS0606,Marketing,Marketing,3,IC,K,zdalnie,2022-01-27,,,,3,
+OS0607,Sprzedaż,Sprzedaż,2,IC,M,hybrydowo,2019-01-13,2025-03-11,dobrowolne,zmiana branży,3,tak
+OS0608,HR,HR,5,M,K,zdalnie,2020-02-11,,,,4,
+OS0609,Obsługa klienta,Operacje,2,IC,K,hybrydowo,2023-01-24,,,,5,
+OS0610,Obsługa klienta,Operacje,3,IC,K,stacjonarnie,2022-07-28,2025-11-03,dobrowolne,tryb i warunki pracy,3,nie
+OS0611,Obsługa klienta,Operacje,5,IC,M,stacjonarnie,2020-06-14,2025-06-27,z inicjatywy firmy,redukcja etatu,3,nie
+OS0612,Logistyka,Operacje,1,IC,K,stacjonarnie,2021-09-19,,,,5,
+OS0613,Sprzedaż,Sprzedaż,5,M,K,stacjonarnie,2024-12-11,,,,3,
+OS0614,HR,HR,3,IC,K,hybrydowo,2025-11-11,,,,3,
+OS0615,Sprzedaż,Sprzedaż,4,IC,K,hybrydowo,2023-03-07,,,,2,
+OS0616,IT,Inżynieria,2,IC,M,hybrydowo,2022-10-21,,,,3,
+OS0617,Sprzedaż,Sprzedaż,2,IC,K,hybrydowo,2021-06-06,2024-12-30,z inicjatywy firmy,wyniki pracy,2,nie
+OS0618,Obsługa klienta,Operacje,3,IC,K,stacjonarnie,2022-04-07,2026-09-09,z inicjatywy firmy,wyniki pracy,3,nie
+OS0619,Logistyka,Operacje,2,IC,M,stacjonarnie,2023-07-20,,,,5,
+OS0620,Finanse,Operacje,3,IC,K,hybrydowo,2024-06-15,,,,4,
+OS0621,Logistyka,Operacje,2,IC,K,hybrydowo,2022-02-01,,,,3,
+OS0622,Obsługa klienta,Operacje,2,IC,K,hybrydowo,2024-03-06,,,,4,
+OS0623,Logistyka,HR,1,IC,K,stacjonarnie,2026-02-28,,,,4,
+OS0624,IT,Inżynieria,4,IC,M,zdalnie,2017-04-18,,,,3,
+OS0625,Obsługa klienta,Operacje,3,IC,K,hybrydowo,2021-02-08,,,,3,
+OS0626,IT,Inżynieria,2,IC,M,hybrydowo,2026-01-23,,,,3,
+OS0627,Obsługa klienta,Operacje,1,IC,M,hybrydowo,2019-11-09,,,,3,
+OS0628,Obsługa klienta,Operacje,3,M,M,hybrydowo,2018-12-29,,,,3,
+OS0629,Obsługa klienta,Operacje,2,IC,K,stacjonarnie,2025-06-04,,,,4,
+OS0630,Obsługa klienta,Operacje,2,IC,K,stacjonarnie,2022-08-05,,,,3,
+OS0631,HR,HR,6,IC,M,hybrydowo,2021-01-26,,,,3,
+OS0632,Obsługa klienta,Operacje,3,IC,K,hybrydowo,2022-01-26,,,,3,
+OS0633,Finanse,Finanse,2,IC,K,hybrydowo,2024-11-17,2025-02-26,dobrowolne,zmiana branży,,nie
+OS0634,IT,Inżynieria,3,M,M,zdalnie,2024-04-05,,,,3,
+OS0635,Sprzedaż,Sprzedaż,4,M,M,hybrydowo,2023-05-11,2025-09-19,dobrowolne,brak możliwości rozwoju,1,nie
+OS0636,Obsługa klienta,Operacje,2,IC,K,stacjonarnie,2020-11-29,2025-11-05,dobrowolne,tryb i warunki pracy,4,nie
+OS0637,Obsługa klienta,Finanse,7,M,K,hybrydowo,2024-08-15,,,,4,
+OS0638,Logistyka,Operacje,3,IC,K,stacjonarnie,2022-08-08,,,,3,
+OS0639,Sprzedaż,Marketing,2,IC,K,hybrydowo,2017-05-16,,,,4,
+OS0640,Finanse,Finanse,2,IC,K,hybrydowo,2022-06-04,,,,3,
+OS0641,Logistyka,Operacje,2,IC,M,hybrydowo,2025-12-09,,,,1,
+OS0642,IT,Inżynieria,1,IC,M,stacjonarnie,2024-07-21,,,,3,
+OS0643,Marketing,Marketing,1,IC,M,hybrydowo,2024-07-02,2025-02-08,dobrowolne,brak możliwości rozwoju,4,tak
+OS0644,Obsługa klienta,Operacje,6,IC,M,stacjonarnie,2026-09-07,,,,,
+OS0645,Logistyka,Operacje,1,IC,M,hybrydowo,2025-12-27,,,,5,
+OS0646,Obsługa klienta,Operacje,2,IC,K,stacjonarnie,2025-05-18,,,,3,
+OS0647,Sprzedaż,Sprzedaż,3,IC,M,hybrydowo,2025-04-18,,,,3,
+OS0648,Marketing,Marketing,1,IC,K,stacjonarnie,2025-05-05,2025-10-11,dobrowolne,tryb i warunki pracy,,nie
+OS0649,IT,Inżynieria,3,IC,M,zdalnie,2020-01-03,,,,1,
+OS0650,IT,Inżynieria,4,IC,K,zdalnie,2019-11-10,,,,3,
+OS0651,Obsługa klienta,Operacje,5,M,K,stacjonarnie,2025-07-14,,,,4,
+OS0652,Obsługa klienta,Operacje,1,IC,M,stacjonarnie,2024-01-21,,,,3,
+OS0653,Finanse,Finanse,5,IC,K,zdalnie,2024-09-12,,,,2,
+OS0654,Logistyka,Operacje,4,IC,K,hybrydowo,2023-07-13,,,,4,
+OS0655,Sprzedaż,Sprzedaż,4,M,K,zdalnie,2026-04-27,2026-06-07,z inicjatywy firmy,wyniki pracy,,nie
+OS0656,Sprzedaż,Sprzedaż,3,IC,M,hybrydowo,2025-12-12,,,,3,
+OS0657,Obsługa klienta,Operacje,3,IC,M,hybrydowo,2026-08-12,,,,,
+OS0658,Obsługa klienta,Operacje,6,IC,K,zdalnie,2019-06-17,,,,4,
+OS0659,Logistyka,Operacje,1,IC,M,stacjonarnie,2019-03-22,,,,2,
+OS0660,Obsługa klienta,Operacje,6,M,K,hybrydowo,2019-02-03,,,,3,
+OS0661,Marketing,Marketing,2,IC,K,hybrydowo,2021-09-14,,,,4,
+OS0662,Logistyka,Operacje,4,M,K,stacjonarnie,2018-02-22,2025-09-24,z inicjatywy firmy,wyniki pracy,3,nie
+OS0663,Obsługa klienta,Operacje,3,IC,K,stacjonarnie,2019-05-07,,,,3,
+OS0664,Logistyka,Operacje,1,IC,M,hybrydowo,2026-05-15,,,,,
+OS0665,Logistyka,Operacje,5,M,K,stacjonarnie,2025-02-04,2025-12-17,dobrowolne,tryb i warunki pracy,2,nie
+OS0666,Finanse,Finanse,3,IC,K,hybrydowo,2022-05-25,,,,3,
+OS0667,Obsługa klienta,Operacje,2,IC,K,stacjonarnie,2026-01-26,,,,3,
+OS0668,Marketing,Marketing,2,IC,K,hybrydowo,2023-05-13,2026-09-12,z inicjatywy firmy,redukcja etatu,3,nie
+OS0669,Obsługa klienta,Operacje,2,IC,K,stacjonarnie,2018-03-23,,,,1,
+OS0670,Finanse,Finanse,4,IC,K,stacjonarnie,2026-10-09,,,,,
+OS0671,Finanse,Finanse,3,IC,M,stacjonarnie,2023-02-26,2025-01-08,dobrowolne,lepsza oferta finansowa,4,tak
+OS0672,Finanse,Finanse,1,IC,M,stacjonarnie,2024-01-30,2026-04-04,dobrowolne,tryb i warunki pracy,4,tak
+OS0673,Logistyka,Operacje,2,IC,M,stacjonarnie,2016-05-25,2025-06-09,z inicjatywy firmy,wyniki pracy,2,nie
+OS0674,Finanse,Finanse,3,IC,M,hybrydowo,2025-06-01,,,,5,
+OS0675,Marketing,Marketing,2,IC,M,zdalnie,2022-07-16,,,,3,
+OS0676,Finanse,Finanse,3,IC,M,hybrydowo,2026-07-02,,,,,
+OS0677,Sprzedaż,Sprzedaż,3,IC,M,stacjonarnie,2015-08-15,,,,4,
+OS0678,Obsługa klienta,Operacje,4,IC,M,stacjonarnie,2025-04-09,2025-11-28,dobrowolne,brak możliwości rozwoju,3,tak
+OS0679,Obsługa klienta,Operacje,3,IC,K,stacjonarnie,2023-04-24,,,,3,
+OS0680,Obsługa klienta,Operacje,6,M,M,stacjonarnie,2026-08-04,,,,,
+OS0681,IT,Inżynieria,3,IC,M,zdalnie,2023-06-23,2025-04-17,dobrowolne,lepsza oferta finansowa,5,tak
+OS0682,Marketing,Marketing,4,IC,K,hybrydowo,2020-05-17,,,,1,
+OS0683,Obsługa klienta,Operacje,1,IC,K,stacjonarnie,2022-07-17,,,,1,
+OS0684,Sprzedaż,Sprzedaż,3,IC,K,stacjonarnie,2021-01-09,2026-09-05,dobrowolne,tryb i warunki pracy,3,tak
+OS0685,Logistyka,Operacje,2,IC,K,zdalnie,2023-11-15,,,,3,
+OS0686,Obsługa klienta,Operacje,6,M,K,hybrydowo,2026-07-04,,,,,
+OS0687,Obsługa klienta,Operacje,4,IC,K,stacjonarnie,2013-12-03,,,,1,
+OS0688,Obsługa klienta,Sprzedaż,3,IC,K,stacjonarnie,2025-01-14,2026-05-10,dobrowolne,lepsza oferta finansowa,3,nie
+OS0689,IT,Inżynieria,4,IC,M,hybrydowo,2009-10-11,,,,4,
+OS0690,IT,Inżynieria,2,IC,M,zdalnie,2017-09-06,,,,4,
+OS0691,Marketing,Marketing,4,IC,M,hybrydowo,2021-03-02,,,,4,
+OS0692,Sprzedaż,Marketing,1,IC,M,hybrydowo,2020-05-15,,,,3,
+OS0693,Logistyka,Operacje,2,IC,M,stacjonarnie,2018-05-09,,,,3,
+OS0694,Obsługa klienta,Operacje,2,IC,K,stacjonarnie,2016-01-25,,,,3,
+OS0695,IT,Inżynieria,3,IC,M,zdalnie,2020-05-31,,,,4,
+OS0696,IT,Inżynieria,3,IC,M,zdalnie,2023-06-24,2025-05-12,z inicjatywy firmy,redukcja etatu,2,nie
+OS0697,IT,Inżynieria,2,IC,K,hybrydowo,2025-10-08,,,,3,
+OS0698,Obsługa klienta,Operacje,1,IC,M,hybrydowo,2024-11-10,2025-09-16,z inicjatywy firmy,wyniki pracy,3,nie
+OS0699,Obsługa klienta,Marketing,3,IC,M,hybrydowo,2025-03-23,,,,3,
+OS0700,Obsługa klienta,Operacje,5,IC,M,hybrydowo,2026-03-15,,,,4,
+OS0701,Finanse,Finanse,1,IC,K,zdalnie,2025-02-16,,,,2,
+OS0702,Finanse,Finanse,1,IC,K,stacjonarnie,2017-05-24,,,,4,
+OS0703,Marketing,Marketing,4,IC,K,hybrydowo,2023-01-15,,,,2,
+OS0704,Sprzedaż,Sprzedaż,2,IC,K,zdalnie,2021-03-24,,,,3,
+OS0705,Finanse,Sprzedaż,5,IC,K,zdalnie,2023-10-13,,,,3,
+OS0706,Obsługa klienta,Operacje,1,IC,M,stacjonarnie,2025-12-25,,,,4,
+OS0707,Logistyka,Operacje,3,IC,M,stacjonarnie,2023-12-07,,,,4,
+OS0708,IT,Inżynieria,6,IC,M,zdalnie,2022-03-10,,,,2,
+OS0709,IT,Inżynieria,3,IC,M,hybrydowo,2026-08-09,,,,,
+OS0710,Sprzedaż,Sprzedaż,2,IC,K,hybrydowo,2022-07-17,2026-09-19,dobrowolne,lepsza oferta finansowa,3,nie
