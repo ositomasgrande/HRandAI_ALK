@@ -85,6 +85,8 @@ tr.wyrozniony td{background:#FFF2CC;font-weight:700}
 .g1{background:#F4B6BE;color:#5b0d19}.g2{background:#FFE08A;color:#4b3900}.g3{background:#BFE3C6;color:#0b3d1a}
 .wid-2{display:grid;gap:1rem;grid-template-columns:1fr}
 @media(min-width:60rem){.wid-2{grid-template-columns:1fr 1fr}.sterowanie{grid-template-columns:1fr 1fr}}
+tr.podejrzany td{background:#F4B6BE;color:#5b0d19}
+#tabela-syn button{min-height:44px;background:transparent;border:1px solid var(--b5);color:inherit}
 </style></head><body>
 <a class="skip" href="#tresc">Przejdź do treści</a>
 <header class="top"><div class="in"><h1>Wykład M1: przygotowanie danych do pracy z AI</h1><p>Pseudonimizacja, anonimizacja i dane syntetyczne. Zajęcia 15.11.2026, Akademia Leona Koźmińskiego. Wszystkie dane na tej stronie są wymyślone.</p></div></header>
@@ -150,7 +152,13 @@ tr.wyrozniony td{background:#FFF2CC;font-weight:700}
 <p>Zanim zaufasz zbiorowi syntetycznemu, sprawdź cztery rzeczy:</p>
 <ul class="kontrola"><li><strong>Liczba wierszy</strong> zgadza się z opisem, który podałeś.</li><li><strong>Widełki płac</strong> mieszczą się w zakresie, o który prosiłeś.</li><li><strong>Identyfikatory są unikalne</strong>, nic się nie powtarza.</li><li><strong>Rozkłady</strong> (np. udział działów i levelów) odpowiadają opisowi.</li></ul>
 <p>Pamiętaj: wnioski z danych syntetycznych nie dotyczą prawdziwej firmy. Służą do testowania promptów i dashboardów.</p>
-<div class="pytanie-sali"><strong>Pytanie do sali:</strong> Do czego nadają się dane syntetyczne, a do czego na pewno nie?</div>
+<h3>Znajdź błędy w zbiorze, który zwróciło AI</h3>
+<p>Poprosiłeś o <strong>20 wierszy</strong>. W zbiorze są <strong>3 błędy</strong>. Kliknij podejrzane wiersze (jeszcze raz, by odznaczyć), wpisz, ile wierszy naprawdę dostałeś, i sprawdź.</p>
+<div class="wid-2"><div class="tab" tabindex="0" role="region" aria-label="Zbiór syntetyczny do sprawdzenia"><table id="tabela-syn"><thead><tr><th scope="col">ID</th><th scope="col">Dział</th><th scope="col">Level</th><th scope="col">Płeć</th><th scope="col">Staż</th><th scope="col">Wynagrodzenie</th></tr></thead><tbody></tbody></table></div>
+<div class="tab" tabindex="0" role="region" aria-label="Widełki płac per level"><table><thead><tr><th scope="col">Level</th><th scope="col">Widełki (PLN)</th></tr></thead><tbody><tr><td>1</td><td>6 200–8 200</td></tr><tr><td>2</td><td>8 000–10 800</td></tr><tr><td>3</td><td>10 500–14 500</td></tr><tr><td>4</td><td>14 000–19 000</td></tr><tr><td>5</td><td>18 000–24 000</td></tr></tbody></table></div></div>
+<p><label for="liczba-syn">Ile wierszy dostałeś?</label> <input type="number" id="liczba-syn" min="0" max="999" inputmode="numeric"> <button type="button" id="sprawdz-syn">Sprawdź</button></p>
+<div id="wynik-syn" class="werdykt" aria-live="polite"></div>
+<div class="pytanie-sali"><strong>Pytanie do sali:</strong> Ile wierszy dostałeś, a ile prosiłeś? Co jeszcze warto policzyć, zanim zaufasz zbiorowi?</div>
 </section>
 <section id="r6" class="rozdzial" data-nr="6" aria-labelledby="t6" hidden>
 <h2 id="t6">6. Podsumowanie i źródła</h2>
@@ -508,6 +516,160 @@ tr.wyrozniony td{background:#FFF2CC;font-weight:700}
    "rok": 2015,
    "pensja": 58000
   }
+ ],
+ "syntetyk": [
+  {
+   "id": "SYN001",
+   "dzial": "Finanse",
+   "level": 3,
+   "plec": "M",
+   "staz": 5,
+   "pensja": 14300
+  },
+  {
+   "id": "SYN002",
+   "dzial": "HR",
+   "level": 3,
+   "plec": "K",
+   "staz": 11,
+   "pensja": 12800
+  },
+  {
+   "id": "SYN003",
+   "dzial": "HR",
+   "level": 1,
+   "plec": "M",
+   "staz": 8,
+   "pensja": 7700
+  },
+  {
+   "id": "SYN004",
+   "dzial": "Obsługa klienta",
+   "level": 3,
+   "plec": "M",
+   "staz": 8,
+   "pensja": 12750
+  },
+  {
+   "id": "SYN005",
+   "dzial": "Finanse",
+   "level": 3,
+   "plec": "K",
+   "staz": 3,
+   "pensja": 13850
+  },
+  {
+   "id": "SYN006",
+   "dzial": "Finanse",
+   "level": 4,
+   "plec": "K",
+   "staz": 12,
+   "pensja": 16000
+  },
+  {
+   "id": "SYN007",
+   "dzial": "IT",
+   "level": 5,
+   "plec": "K",
+   "staz": 9,
+   "pensja": 23400
+  },
+  {
+   "id": "SYN007",
+   "dzial": "IT",
+   "level": 1,
+   "plec": "M",
+   "staz": 7,
+   "pensja": 6200
+  },
+  {
+   "id": "SYN009",
+   "dzial": "IT",
+   "level": 2,
+   "plec": "K",
+   "staz": 11,
+   "pensja": 8550
+  },
+  {
+   "id": "SYN010",
+   "dzial": "IT",
+   "level": 3,
+   "plec": "K",
+   "staz": 9,
+   "pensja": 13600
+  },
+  {
+   "id": "SYN011",
+   "dzial": "IT",
+   "level": 2,
+   "plec": "M",
+   "staz": 10,
+   "pensja": 8550
+  },
+  {
+   "id": "SYN012",
+   "dzial": "IT",
+   "level": 2,
+   "plec": "K",
+   "staz": 10,
+   "pensja": 15200
+  },
+  {
+   "id": "SYN013",
+   "dzial": "Obsługa klienta",
+   "level": 3,
+   "plec": "K",
+   "staz": 6,
+   "pensja": 11650
+  },
+  {
+   "id": "SYN014",
+   "dzial": "Obsługa klienta",
+   "level": 4,
+   "plec": "K",
+   "staz": 4,
+   "pensja": 17800
+  },
+  {
+   "id": "SYN016",
+   "dzial": "HR",
+   "level": 4,
+   "plec": "K",
+   "staz": 7,
+   "pensja": 16000
+  },
+  {
+   "id": "SYN017",
+   "dzial": "IT",
+   "level": 3,
+   "plec": "K",
+   "staz": 1,
+   "pensja": 14500
+  },
+  {
+   "id": "SYN018",
+   "dzial": "IT",
+   "level": 4,
+   "plec": "K",
+   "staz": 0,
+   "pensja": 17700
+  },
+  {
+   "id": "SYN019",
+   "dzial": "Finanse",
+   "level": 3,
+   "plec": "K",
+   "staz": 5,
+   "pensja": 11750
+  },
+  {
+   "id": "SYN020",
+   "dzial": "HR",
+   "level": 1,
+   "plec": "M",
+   "staz": 6,
+   "pensja": 7500
+  }
  ]
 };</script>
 <script>/* Czysta logika wykladu M1 (bez DOM): przeksztalcenia danych, wielkosc grup, werdykt, przepisy Excela. */
@@ -628,9 +790,20 @@ tr.wyrozniony td{background:#FFF2CC;font-weight:700}
     return { ids: ids, zidentyfikowano: ids.length === 1 && ids[0] === idCelu, uzyteczne: uzyteczne };
   }
 
+  // Kontrola zbioru syntetycznego: liczba wierszy, duplikaty ID, pensje poza widelkami levelu
+  var WIDELKI_SYN = { 1: [6200, 8200], 2: [8000, 10800], 3: [10500, 14500], 4: [14000, 19000], 5: [18000, 24000] };
+  function kontrolaSyntetyku(wiersze, prosilemN) {
+    var licz = {}; wiersze.forEach(function (r) { licz[r.id] = (licz[r.id] || 0) + 1; });
+    return {
+      liczbaWierszy: wiersze.length, brakuje: prosilemN - wiersze.length,
+      duplikatyId: Object.keys(licz).filter(function (id) { return licz[id] > 1; }),
+      poza: wiersze.filter(function (r) { var w = WIDELKI_SYN[r.level]; return !w || r.pensja < w[0] || r.pensja > w[1]; }).map(function (r) { return r.id; })
+    };
+  }
+
   var API = { PROG: PROG, ID_PREZESA: ID_PREZESA, KOLUMNY: KOLUMNY, IDENT: IDENT, POSREDNIE: POSREDNIE, NEEDED: NEEDED, AKCJE: AKCJE, NAZWY_AKCJI: NAZWY_AKCJI, DOMYSLNE: DOMYSLNE,
     ROZWIAZANIE_WZOROWE: ROZWIAZANIE_WZOROWE, zastosuj: zastosuj, wielkosciGrup: wielkosciGrup, werdykt: werdykt, kontrolaCelu: kontrolaCelu,
-    klasyfikujKolumny: klasyfikujKolumny, przepisExcel: przepisExcel, przepisTestGrup: przepisTestGrup, losujRunde: losujRunde, kandydaci: kandydaci, mulberry32: mulberry32, tasuj: tasuj };
+    klasyfikujKolumny: klasyfikujKolumny, przepisExcel: przepisExcel, przepisTestGrup: przepisTestGrup, losujRunde: losujRunde, kontrolaSyntetyku: kontrolaSyntetyku, WIDELKI_SYN: WIDELKI_SYN, kandydaci: kandydaci, mulberry32: mulberry32, tasuj: tasuj };
   g.WykladLogika = API; if (typeof module !== "undefined" && module.exports) module.exports = API;
 })(typeof window !== "undefined" ? window : globalThis);
 </script>
@@ -813,6 +986,31 @@ tr.wyrozniony td{background:#FFF2CC;font-weight:700}
   $("#detektyw-od-nowa").addEventListener("click", function () { det.ziarno += 1; det.nr = 1; det.wynik = null; przelicz(); });
   $("#detektyw-wroc").addEventListener("click", function () { location.hash = "#3"; pokaz(3); });
   Wyklad.rejestr.push(renderDetektyw);
+
+  // ---------- rozdzial 5: znajdz bledy w zbiorze syntetycznym ----------
+  (function () {
+    var SYN = window.DANE_DEMO.syntetyk || [], zazn = {}, PROSILEM = 20;
+    var tb = $("#tabela-syn tbody");
+    SYN.forEach(function (r, i) {
+      var tr = document.createElement("tr"); tr.dataset.id = r.id; tr.dataset.i = i;
+      tr.innerHTML = '<td><button type="button" aria-pressed="false" aria-label="Oznacz wiersz ' + r.id + ' jako podejrzany">' + r.id + "</button></td><td>" + r.dzial + "</td><td>" + r.level + "</td><td>" + r.plec + "</td><td>" + r.staz + "</td><td>" + kwota(r.pensja) + "</td>";
+      tr.addEventListener("click", function () { zazn[i] = !zazn[i]; tr.classList.toggle("podejrzany", !!zazn[i]); $("button", tr).setAttribute("aria-pressed", zazn[i] ? "true" : "false"); });
+      tb.appendChild(tr);
+    });
+    $("#sprawdz-syn").addEventListener("click", function () {
+      var k = L.kontrolaSyntetyku(SYN, PROSILEM), znalezione = 0, zbedne = 0, ids = SYN.map(function (r) { return r.id; });
+      var wyb = Object.keys(zazn).filter(function (i) { return zazn[i]; }).map(function (i) { return ids[+i]; });
+      var dupl = k.duplikatyId.some(function (id) { return wyb.indexOf(id) >= 0; }), poza = k.poza.some(function (id) { return wyb.indexOf(id) >= 0; });
+      var wpisano = $("#liczba-syn").value, liczba = wpisano !== "" && +wpisano === k.liczbaWierszy && k.brakuje > 0;
+      znalezione = (dupl ? 1 : 0) + (poza ? 1 : 0) + (liczba ? 1 : 0);
+      var trafione = k.duplikatyId.concat(k.poza); zbedne = wyb.filter(function (id) { return trafione.indexOf(id) < 0; }).length;
+      var t = "Znalezione błędy: " + znalezione + " z 3.";
+      if (znalezione < 3) t += " Szukaj dalej: " + [!liczba ? "liczby wierszy" : "", !dupl ? "powtórzonego ID" : "", !poza ? "pensji poza widełkami" : ""].filter(Boolean).join(", ") + ".";
+      else t += " Komplet: brakuje " + k.brakuje + " wiersz, " + k.duplikatyId.join(", ") + " występuje dwa razy, " + k.poza.join(", ") + " ma pensję poza widełkami.";
+      if (zbedne) t += " Zaznaczono niepotrzebnie: " + zbedne + ".";
+      $("#wynik-syn").textContent = t;
+    });
+  })();
 
   pokaz(zHasha());
 })();
