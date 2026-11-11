@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="description" content="Interaktywny wykład: pseudonimizacja, anonimizacja i dane syntetyczne.">
+<title>Wykład M1: przygotowanie danych do pracy z AI</title><style>:root{--granat:#030928;--tlo:#EFF2FC;--ink:#162447;--b1:#EBDFD5;--b2:#DAC4B0;--b3:#CFB399;--b4:#C5A181;--b5:#B4865E;--czerw:#A51C30;--zlot:#DDBA4D;--szary:#3F3F46;--bialy:#fff}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--tlo);color:var(--ink);font:1rem/1.6 "Open Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.skip{position:absolute;left:-999px;top:0;background:var(--zlot);color:var(--granat);padding:.6rem 1rem;z-index:10}
+.skip:focus{left:0}
+header.top{background:var(--granat);color:#fff;padding:1.4rem 1rem 1.2rem;border-bottom:4px solid var(--zlot)}
+header.top .in,main,footer .in{max-width:50rem;margin:0 auto}
+header.top h1{margin:0 0 .3rem;font-size:1.45rem;line-height:1.25;font-weight:700}
+header.top p{margin:0;color:var(--b2);font-size:.95rem}
+header.top a{color:var(--zlot)}
+nav.menu{background:var(--ink);padding:.4rem 1rem}
+nav.menu ul{list-style:none;margin:0 auto;padding:0;max-width:50rem;display:flex;flex-wrap:wrap;gap:.25rem .9rem}
+nav.menu a{color:#fff;display:inline-block;padding:.45rem 0;font-size:.92rem}
+main{padding:1rem 1rem 3rem}
+h2{font-size:1.3rem;margin:2.2rem 0 .6rem;color:var(--granat);border-left:6px solid var(--zlot);padding-left:.6rem;line-height:1.3}
+h3{font-size:1.08rem;margin:1.2rem 0 .4rem;color:var(--granat)}
+a{color:var(--czerw)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--zlot);outline-offset:2px}
+p,li{max-width:46rem}
+code{background:var(--b1);padding:.05rem .3rem;border-radius:3px;font-size:.92em;word-break:break-word}
+.karta{background:var(--bialy);border:1px solid var(--b2);border-radius:8px;padding:1rem;margin:1rem 0}
+.karta>h3:first-child{margin-top:0}
+.czas{display:inline-block;background:var(--b1);color:var(--granat);padding:.15rem .6rem;border-radius:99px;font-size:.85rem;margin:.1rem 0 .6rem}
+.ramka{background:var(--b1);border-left:6px solid var(--b5);padding:.8rem 1rem;border-radius:4px;margin:1rem 0}
+.ramka.uwaga{border-left-color:var(--czerw)}
+.ramka>:first-child{margin-top:0}.ramka>:last-child{margin-bottom:0}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{border:1px solid var(--b2);padding:.35rem .5rem;text-align:left;vertical-align:top}
+th{background:var(--granat);color:#fff}
+.tab{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:.5rem 0}
+.tab:focus-visible{outline:3px solid var(--zlot)}
+.prompt{position:relative;background:var(--granat);color:#fff;border-radius:6px;padding:.9rem 1rem;margin:.5rem 0;white-space:pre-wrap;word-wrap:break-word;font:.9rem/1.55 ui-monospace,Menlo,Consolas,monospace}
+.prompt mark{background:var(--zlot);color:var(--granat);padding:0 .2rem;border-radius:3px}
+button,.przycisk{font:inherit;background:var(--granat);color:#fff;border:2px solid var(--granat);padding:.55rem 1rem;border-radius:6px;cursor:pointer;min-height:44px;text-decoration:none;display:inline-block}
+button:hover,.przycisk:hover{background:var(--ink)}
+button.jasny{background:#fff;color:var(--granat);border-color:var(--granat)}
+button.kopiuj{margin:.2rem 0 .6rem}
+.ok{color:#0b6b2f;font-weight:700;margin-left:.5rem}
+ul.kontrola{list-style:none;padding:0}
+ul.kontrola li{display:flex;gap:.6rem;align-items:flex-start;padding:.2rem 0}
+ul.kontrola input{width:1.3rem;height:1.3rem;margin-top:.25rem;flex:none}
+details{border:1px solid var(--b2);border-radius:6px;background:#fff;margin:.6rem 0;padding:.1rem .8rem}
+summary{cursor:pointer;padding:.6rem 0;font-weight:600;color:var(--granat);min-height:44px}
+label{display:block;font-weight:600;margin:.6rem 0 .2rem}
+input[type=text],input[type=time],textarea{font:inherit;width:100%;max-width:46rem;padding:.5rem;border:2px solid var(--b3);border-radius:6px;background:#fff;color:var(--ink)}
+textarea{min-height:5.5rem}
+.siatka{display:grid;gap:.8rem;grid-template-columns:1fr}
+.plik{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--b2);border-radius:6px;padding:.6rem .8rem}
+.plik span{flex:1 1 14rem}
+footer{background:var(--granat);color:var(--b2);padding:1.2rem 1rem;font-size:.88rem}
+.pytanie{background:var(--granat);color:#fff;padding:.8rem 1rem;border-radius:6px;font-weight:600;margin-top:1rem}
+.pytanie+label{margin-top:.8rem}
+@media(min-width:42rem){body{font-size:1.04rem}header.top h1{font-size:1.8rem}.siatka{grid-template-columns:1fr 1fr}}
+@media print{nav.menu,button,.skip{display:none}.karta{break-inside:avoid}body{background:#fff}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+/* Wyglad wykladu M1 (dziedziczy zmienne z src/strona/styl.css) */
+.rozdzial[hidden]{display:none}
+.rozdzial h2{margin-top:1rem}
+.cel{background:#FFF2CC;border-left:6px solid var(--zlot);padding:.8rem 1rem;border-radius:4px;margin:1rem 0}
+.cel>strong:first-child{color:#7A5C00}
+.def{background:#fff;border:1px solid var(--b2);border-radius:6px;padding:.7rem 1rem;margin:1rem 0}
+.pytanie-sali{background:var(--granat);color:#fff;padding:.8rem 1rem;border-radius:6px;margin:1.2rem 0}
+.pytanie-sali a{color:var(--zlot)}
+nav.rozdzialy{position:sticky;top:0;z-index:5;background:var(--ink);padding:.4rem 1rem}
+nav.rozdzialy .in{max-width:62rem;margin:0 auto;display:flex;align-items:center;gap:.6rem;justify-content:space-between}
+nav.rozdzialy button{background:#fff;color:var(--granat);border-color:#fff;min-width:6rem}
+nav.rozdzialy button[disabled]{opacity:.45;cursor:not-allowed}
+#postep{color:#fff;font-weight:600;text-align:center;flex:1}
+main.wide{max-width:62rem}
+th .lit{display:block;font-size:.75rem;color:var(--zlot);font-weight:700}
+button.kl{background:transparent;border:2px dashed var(--b3);color:inherit;padding:.25rem .5rem;min-height:44px;width:100%;text-align:left;font-weight:600;border-radius:4px}
+th button.kl{color:#fff}
+button.kl[data-stan="wprost"]{border:2px solid var(--czerw);background:#7d1423}
+button.kl[data-stan="posrednio"]{border:2px solid var(--zlot);background:#5b4a14}
+button.kl[data-stan="nie"]{border:2px solid var(--b5);background:#3b3322}
+button.kl .stan{display:block;font-size:.78rem;font-weight:400}
+tr.wyrozniony td{background:#FFF2CC;font-weight:700}
+#wynik-kl{margin:.6rem 0;min-height:1.5rem}
+.sterowanie{display:grid;gap:.4rem;grid-template-columns:1fr}
+.siatka-ryzyka td,.siatka-ryzyka th{text-align:center}
+.g1{background:#F4B6BE;color:#5b0d19}.g2{background:#FFE08A;color:#4b3900}.g3{background:#BFE3C6;color:#0b3d1a}
+.wid-2{display:grid;gap:1rem;grid-template-columns:1fr}
+@media(min-width:60rem){.wid-2{grid-template-columns:1fr 1fr}.sterowanie{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="top"><div class="in"><h1>Wykład M1: przygotowanie danych do pracy z AI</h1><p>Pseudonimizacja, anonimizacja i dane syntetyczne. Zajęcia 15.11.2026, Akademia Leona Koźmińskiego. Wszystkie dane na tej stronie są wymyślone.</p></div></header>
+<noscript><div class="ramka uwaga"><strong>Włącz JavaScript, aby użyć wykładu.</strong> Bez niego strona nie pokaże rozdziałów.</div></noscript>
+<nav class="rozdzialy" aria-label="Rozdziały wykładu"><div class="in"><button type="button" id="wstecz">Wstecz</button><span id="postep" aria-live="polite"></span><button type="button" id="dalej">Dalej</button></div></nav>
+<main id="tresc" class="wide" tabindex="-1">
+
+<section id="r1" class="rozdzial" data-nr="1" aria-labelledby="t1">
+<h2 id="t1">1. Problem: kto jest w tym pliku?</h2>
+<div class="cel"><strong>CEL.</strong> Zanim cokolwiek zrobimy z danymi kadrowymi, ustalamy, które kolumny wskazują człowieka.</div>
+<p class="def"><strong>Dane osobowe</strong> to wszelkie informacje o zidentyfikowanej lub możliwej do zidentyfikowania osobie fizycznej (RODO, art. 4 pkt 1). Tekst: <a href="https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32016R0679">eur-lex.europa.eu</a>.</p>
+<p>To plik, jaki dostaje każdy z nas z kadr. Kliknij nagłówek kolumny, żeby ją oznaczyć: <strong>wprost</strong> (wskazuje człowieka sam), <strong>pośrednio</strong> (wskazuje w połączeniu z innymi) albo <strong>nie identyfikuje</strong>. Kolejne kliknięcia przełączają oznaczenie.</p>
+<div class="tab" tabindex="0" role="region" aria-label="Tabela 25 osób z kolumnami do oznaczenia"><table id="tabela-oryg"><thead><tr></tr></thead><tbody></tbody></table></div>
+<p><button type="button" id="sprawdz-kl">Sprawdź oznaczenia</button></p>
+<div id="wynik-kl" aria-live="polite"></div>
+<div class="pytanie-sali"><strong>Pytanie do sali:</strong> Które kolumny wskazują człowieka wprost, a które pośrednio? Wpiszcie litery kolumn w czat spotkania.</div>
+</section>
+
+<section id="r2" class="rozdzial" data-nr="2" aria-labelledby="t2" hidden>
+<h2 id="t2">2. Pseudonimizacja: zamieniamy nazwiska na kody</h2>
+<div class="cel"><strong>CEL.</strong> Chcemy dalej wiedzieć, czyja to pensja, ale plik nie ma wyglądać jak lista nazwisk.</div>
+<p class="def"><strong>Pseudonimizacja</strong> to takie przetworzenie danych, że bez dodatkowych informacji nie da się ich przypisać konkretnej osobie, a te dodatkowe informacje są przechowywane osobno i zabezpieczone (RODO, art. 4 pkt 5). Pseudonimizowane dane nadal są danymi osobowymi. Tekst: <a href="https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32016R0679">eur-lex.europa.eu</a>.</p>
+<p><button type="button" id="kody-wszystkie">Zamień imię, PESEL, e-mail i telefon na kody</button></p>
+<div class="tab" tabindex="0" role="region" aria-label="Tabela po pseudonimizacji"><table id="tabela-pseudo"><thead></thead><tbody></tbody></table></div>
+<div id="werdykt-2" class="werdykt" aria-live="polite"></div>
+<details id="mapa-kodow" hidden><summary>Mapa kodów: kto kryje się pod którym kodem</summary>
+<p><strong>Trzymaj osobno, nie wysyłaj do czatu.</strong> To właśnie ta tabela sprawia, że dane nadal są osobowe.</p>
+<div class="tab" tabindex="0" role="region" aria-label="Mapa kodów"><table><thead><tr><th scope="col">Kod</th><th scope="col">Osoba</th></tr></thead><tbody></tbody></table></div></details>
+<div class="pytanie-sali"><strong>Pytanie do sali:</strong> Czy ten plik możemy wkleić do czatu AI? Co jeszcze w nim zostało, po czym można rozpoznać osobę?</div>
+</section>
+<section id="r3" class="rozdzial" data-nr="3" aria-labelledby="t3" hidden>
+<h2 id="t3">3. Anonimizacja: symulator</h2>
+<div class="cel"><strong>CEL.</strong> Czy na tym samym levelu zarabia się podobnie w różnych działach? Potrzebne: dział, level, wynagrodzenie. Wszystko inne jest zbędne.</div>
+<p class="def"><strong>Dane anonimowe</strong> to takie, w których nie da się już zidentyfikować osoby żadnym racjonalnie dostępnym sposobem (RODO, motyw 26). Grupa robocza art. 29 wskazuje trzy testy: czy da się wskazać osobę (<em>singling out</em>), powiązać jej rekordy, wywnioskować o niej coś. Źródła: <a href="https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32016R0679">RODO</a>, <a href="https://ec.europa.eu/justice/article-29/documentation/opinion-recommendation/files/2014/wp216_en.pdf">opinia WP216</a>.</p>
+<div class="wid-2">
+<div><h3>Ustawienia kolumn</h3><div id="sterowanie" class="sterowanie"></div><p><button type="button" id="reset">Przywróć oryginał</button></p></div>
+<div><h3>Ocena</h3><div id="werdykt" class="werdykt" aria-live="polite"></div><ul id="ostrzezenia"></ul><div id="cel-kontrola"></div>
+<h3>Wielkość grup</h3><p>Grupa to osoby z identycznym zestawem wartości w kolumnach, po których można je rozpoznać.</p>
+<ul class="hist"><li><span class="g1">Sami (grupa 1):</span> <strong id="hist-1">0</strong> osób</li><li><span class="g2">W parach (grupa 2):</span> <strong id="hist-2">0</strong> osób</li><li><span class="g3">W grupie 3+:</span> <strong id="hist-3">0</strong> osób</li></ul></div></div>
+<h3>Wynik</h3><p id="info-usuniete"></p>
+<div class="tab" tabindex="0" role="region" aria-label="Tabela wynikowa"><table id="tabela-wynik"><thead></thead><tbody></tbody></table></div>
+<h3>Siatka dział × level</h3>
+<div class="tab" tabindex="0" role="region" aria-label="Siatka dział i level"><table id="siatka" class="siatka-ryzyka"></table></div>
+<h3>Jak to zrobić w Excelu</h3>
+<div class="def"><p><strong>Formuły (polski Excel)</strong></p><div id="excel-pl"></div><p><strong>Formuły (angielski Excel)</strong></p><div id="excel-en"></div><p><strong>Kroki</strong></p><ol id="excel-kroki"></ol></div>
+<div class="pytanie-sali"><strong>Pytanie do sali:</strong> Co zrobić z jedyną osobą na levelu 9? Dlaczego sama dokładna pensja bywa odciskiem palca?</div>
+</section>
+<section id="r5" class="rozdzial" data-nr="5" aria-labelledby="t5" hidden>
+<h2 id="t5">5. Dane syntetyczne</h2>
+<div class="cel"><strong>CEL.</strong> Chcę przetestować prompt albo dashboard, a nie wolno mi użyć prawdziwych danych.</div>
+<p class="def"><strong>Dane syntetyczne</strong> to dane wymyślone (przez człowieka, program lub AI), zbudowane tak, by przypominały prawdziwe. Jeśli powstają z prawdziwego pliku, trzeba jeszcze ocenić, czy nie są w rzeczywistości danymi osobowymi (EDPS, TechSonar: <a href="https://edps.europa.eu/press-publications/publications/techsonar/synthetic-data_en">edps.europa.eu</a>). My generujemy je z opisu: parametrów, widełek i zjawisk, nie z prawdziwego pliku.</p>
+<p>Zanim zaufasz zbiorowi syntetycznemu, sprawdź cztery rzeczy:</p>
+<ul class="kontrola"><li><strong>Liczba wierszy</strong> zgadza się z opisem, który podałeś.</li><li><strong>Widełki płac</strong> mieszczą się w zakresie, o który prosiłeś.</li><li><strong>Identyfikatory są unikalne</strong>, nic się nie powtarza.</li><li><strong>Rozkłady</strong> (np. udział działów i levelów) odpowiadają opisowi.</li></ul>
+<p>Pamiętaj: wnioski z danych syntetycznych nie dotyczą prawdziwej firmy. Służą do testowania promptów i dashboardów.</p>
+<div class="pytanie-sali"><strong>Pytanie do sali:</strong> Do czego nadają się dane syntetyczne, a do czego na pewno nie?</div>
+</section>
+<section id="r6" class="rozdzial" data-nr="6" aria-labelledby="t6" hidden>
+<h2 id="t6">6. Podsumowanie i źródła</h2>
+<div class="cel"><strong>CEL.</strong> Wiedzieć, po które z trzech narzędzi sięgnąć, i nie wysłać do czatu niczego, czego nie wolno.</div>
+<div class="tab" tabindex="0" role="region" aria-label="Porównanie trzech narzędzi"><table><thead><tr><th scope="col"></th><th scope="col">Pseudonimizacja</th><th scope="col">Anonimizacja</th><th scope="col">Dane syntetyczne</th></tr></thead><tbody>
+<tr><th scope="row">Co to jest</th><td>Podmiana identyfikatora (imię, PESEL, nr kadrowy) na kod. Mapa kod → osoba trzymana osobno.</td><td>Usunięcie lub uogólnienie danych tak, aby człowieka nie dało się wskazać rozsądnymi środkami.</td><td>Dane wymyślone (przez człowieka, program lub AI), zbudowane tak, by przypominały prawdziwe.</td></tr>
+<tr><th scope="row">Czy to nadal dane osobowe?</th><td>TAK. Ktoś ma mapę albo może ją odtworzyć.</td><td>NIE, jeśli zrobiona poprawnie. Zawodzi przy unikalnej kombinacji cech.</td><td>NIE, jeśli nie powstały z prawdziwego pliku ani go nie powielają.</td></tr>
+<tr><th scope="row">Jak to robimy</th><td>Nowy kod niezależny od danych osoby. Mapa w osobnym pliku. Zero kodów z PESEL i numeru kadrowego.</td><td>Usuń kolumny. Uogólnij (przedziały). Połącz małe grupy. Usuń rzadkie rekordy. Sprawdź wielkość grup (min. 3).</td><td>Opisz parametry i zjawiska. Wygeneruj. Sprawdź zakresy, liczbę wierszy, powtórzenia.</td></tr>
+<tr><th scope="row">Po co</th><td>Gdy firma musi wrócić do konkretnej osoby (np. korekta pensji).</td><td>Gdy chcemy analizować grupy, bez wskazywania osób.</td><td>Gdy testujemy prompty, dashboardy i narzędzia, a nie wyciągamy wniosków.</td></tr>
+<tr><th scope="row">Najczęstszy błąd</th><td>Ukryty arkusz z mapą w wysyłanym skoroszycie. Kod z PESEL.</td><td>Zostawiona jedyna osoba w grupie. Pola tekstowe i kolumna „Przełożony”.</td><td>Wiara, że wnioski z syntetyku dotyczą prawdziwej firmy.</td></tr>
+<tr><th scope="row">Czy wolno wysłać do czatu?</th><td>Nie (to nadal dane osobowe).</td><td>Tak, jeśli firma tak zdecyduje i dane przeszły test grup.</td><td>Tak.</td></tr>
+</tbody></table></div>
+<div class="def"><p><strong>Pseudonimizacja to nadal dane osobowe.</strong> Anonimizacja to praca na grupach, nie przycisk. Dane syntetyczne to bezpieczny plac zabaw, nie źródło wniosków o firmie. Co raz poszło do zewnętrznego narzędzia bez podstawy, to już wyciek.</p></div>
+<h3>Czego nie wklejać do czatu AI</h3>
+<ul><li>PESEL, imię i nazwisko, e-mail, telefon</li><li>mapy kodów (kod → osoba)</li><li>wolny tekst z komentarzami, np. oceny pracowników</li><li>dokładne pensje przy małych grupach (jedna osoba na levelu)</li></ul>
+<h3>Gdzie poczytać więcej</h3>
+<ul>
+<li>RODO po polsku (art. 4 pkt 1 i 5): <a href="https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:32016R0679">eur-lex.europa.eu</a></li>
+<li>RODO, motyw 26 (informacje anonimowe): <a href="https://gdpr-text.com/pl/read/recital-26/">gdpr-text.com</a></li>
+<li>Opinia 05/2014 o technikach anonimizacji (WP216): <a href="https://ec.europa.eu/justice/article-29/documentation/opinion-recommendation/files/2014/wp216_en.pdf">ec.europa.eu</a></li>
+<li>EROD o różnicy między anonimizacją a pseudonimizacją: <a href="https://www.edpb.europa.eu/topics/ai-and-technology/anonymisation-pseudonymisation_pl">edpb.europa.eu</a></li>
+<li>Wytyczne EROD 01/2025 o pseudonimizacji: <a href="https://www.edpb.europa.eu/our-work-tools/documents/public-consultations/2025/guidelines-012025-pseudonymisation_en">edpb.europa.eu</a></li>
+<li>EDPS, TechSonar o danych syntetycznych: <a href="https://edps.europa.eu/press-publications/publications/techsonar/synthetic-data_en">edps.europa.eu</a></li>
+<li>Polski organ nadzorczy (UODO): <a href="https://uodo.gov.pl">uodo.gov.pl</a></li></ul>
+<p>Granice pojęć i orzecznictwo (np. wyrok TSUE C-413/23 P) omówi w lutym dr Dorota Jarzębowska. To materiał edukacyjny, nie porada prawna.</p>
+<div class="pytanie-sali"><strong>Pytanie do sali:</strong> Jedno zdanie: co zmienicie jutro w sposobie, w jaki wrzucacie dane do AI?</div>
+</section>
+
+</main>
+<footer><div class="in">Materiały edukacyjne. Wszystkie osoby są wymyślone, zbieżność nazwisk jest przypadkowa, a numery PESEL są fałszywe (błędna suma kontrolna). Strona nie zbiera i nie zapisuje żadnych danych.</div></footer>
+<script>window.DANE_DEMO={
+ "osoby": [
+  {
+   "id": "w01",
+   "imie": "Anna Kowalczyk",
+   "pesel": "79252731036",
+   "email": "anna.kowalczyk@firmademo.example",
+   "telefon": "+48 500 100 100",
+   "dzial": "IT",
+   "stanowisko": "Programista",
+   "level": 3,
+   "miasto": "Warszawa",
+   "rok": 2021,
+   "pensja": 14123
+  },
+  {
+   "id": "w02",
+   "imie": "Piotr Wiśniewski",
+   "pesel": "21872855254",
+   "email": "piotr.wisniewski@firmademo.example",
+   "telefon": "+48 500 100 101",
+   "dzial": "IT",
+   "stanowisko": "Programista",
+   "level": 3,
+   "miasto": "Warszawa",
+   "rok": 2022,
+   "pensja": 13921
+  },
+  {
+   "id": "w03",
+   "imie": "Katarzyna Zielińska",
+   "pesel": "28096058452",
+   "email": "katarzyna.zielinska@firmademo.example",
+   "telefon": "+48 500 100 102",
+   "dzial": "IT",
+   "stanowisko": "Programista",
+   "level": 4,
+   "miasto": "Kraków",
+   "rok": 2019,
+   "pensja": 17575
+  },
+  {
+   "id": "w04",
+   "imie": "Michał Lewandowski",
+   "pesel": "65131061776",
+   "email": "michał.lewandowski@firmademo.example",
+   "telefon": "+48 500 100 103",
+   "dzial": "IT",
+   "stanowisko": "Programista",
+   "level": 2,
+   "miasto": "Warszawa",
+   "rok": 2024,
+   "pensja": 9994
+  },
+  {
+   "id": "w05",
+   "imie": "Magdalena Kamińska",
+   "pesel": "13114949500",
+   "email": "magdalena.kaminska@firmademo.example",
+   "telefon": "+48 500 100 104",
+   "dzial": "IT",
+   "stanowisko": "Tester",
+   "level": 2,
+   "miasto": "Warszawa",
+   "rok": 2023,
+   "pensja": 9473
+  },
+  {
+   "id": "w06",
+   "imie": "Tomasz Dąbrowski",
+   "pesel": "24429252881",
+   "email": "tomasz.dabrowski@firmademo.example",
+   "telefon": "+48 500 100 105",
+   "dzial": "IT",
+   "stanowisko": "DevOps",
+   "level": 4,
+   "miasto": "Warszawa",
+   "rok": 2020,
+   "pensja": 17875
+  },
+  {
+   "id": "w07",
+   "imie": "Agnieszka Wójcik",
+   "pesel": "85187594893",
+   "email": "agnieszka.wojcik@firmademo.example",
+   "telefon": "+48 500 100 106",
+   "dzial": "IT",
+   "stanowisko": "Programista",
+   "level": 3,
+   "miasto": "Kraków",
+   "rok": 2022,
+   "pensja": 13809
+  },
+  {
+   "id": "w08",
+   "imie": "Marcin Kozłowski",
+   "pesel": "69106722330",
+   "email": "marcin.kozłowski@firmademo.example",
+   "telefon": "+48 500 100 107",
+   "dzial": "IT",
+   "stanowisko": "Analityk danych",
+   "level": 3,
+   "miasto": "Warszawa",
+   "rok": 2021,
+   "pensja": 13264
+  },
+  {
+   "id": "w09",
+   "imie": "Joanna Jankowska",
+   "pesel": "60614360184",
+   "email": "joanna.jankowska@firmademo.example",
+   "telefon": "+48 500 100 108",
+   "dzial": "Sprzedaż",
+   "stanowisko": "Account Manager",
+   "level": 3,
+   "miasto": "Warszawa",
+   "rok": 2020,
+   "pensja": 12658
+  },
+  {
+   "id": "w10",
+   "imie": "Paweł Mazur",
+   "pesel": "39390426757",
+   "email": "paweł.mazur@firmademo.example",
+   "telefon": "+48 500 100 109",
+   "dzial": "Sprzedaż",
+   "stanowisko": "Account Manager",
+   "level": 3,
+   "miasto": "Kraków",
+   "rok": 2022,
+   "pensja": 11828
+  },
+  {
+   "id": "w11",
+   "imie": "Ewa Krawczyk",
+   "pesel": "26970531086",
+   "email": "ewa.krawczyk@firmademo.example",
+   "telefon": "+48 500 100 110",
+   "dzial": "Sprzedaż",
+   "stanowisko": "Account Manager",
+   "level": 2,
+   "miasto": "Warszawa",
+   "rok": 2023,
+   "pensja": 9343
+  },
+  {
+   "id": "w12",
+   "imie": "Krzysztof Piotrowski",
+   "pesel": "53895709362",
+   "email": "krzysztof.piotrowski@firmademo.example",
+   "telefon": "+48 500 100 111",
+   "dzial": "Sprzedaż",
+   "stanowisko": "Handlowiec",
+   "level": 2,
+   "miasto": "Gdańsk",
+   "rok": 2024,
+   "pensja": 8669
+  },
+  {
+   "id": "w13",
+   "imie": "Monika Grabowska",
+   "pesel": "75174303344",
+   "email": "monika.grabowska@firmademo.example",
+   "telefon": "+48 500 100 112",
+   "dzial": "Sprzedaż",
+   "stanowisko": "Kierownik sprzedaży",
+   "level": 5,
+   "miasto": "Warszawa",
+   "rok": 2018,
+   "pensja": 20881
+  },
+  {
+   "id": "w14",
+   "imie": "Jakub Nowicki",
+   "pesel": "45422152411",
+   "email": "jakub.nowicki@firmademo.example",
+   "telefon": "+48 500 100 113",
+   "dzial": "Sprzedaż",
+   "stanowisko": "Account Manager",
+   "level": 2,
+   "miasto": "Warszawa",
+   "rok": 2022,
+   "pensja": 9867
+  },
+  {
+   "id": "w15",
+   "imie": "Aleksandra Pawłowska",
+   "pesel": "70876792823",
+   "email": "aleksandra.pawłowska@firmademo.example",
+   "telefon": "+48 500 100 114",
+   "dzial": "Obsługa klienta",
+   "stanowisko": "Konsultant",
+   "level": 1,
+   "miasto": "Warszawa",
+   "rok": 2024,
+   "pensja": 6801
+  },
+  {
+   "id": "w16",
+   "imie": "Łukasz Michalski",
+   "pesel": "79500959320",
+   "email": "łukasz.michalski@firmademo.example",
+   "telefon": "+48 500 100 115",
+   "dzial": "Obsługa klienta",
+   "stanowisko": "Konsultant",
+   "level": 1,
+   "miasto": "Warszawa",
+   "rok": 2023,
+   "pensja": 7094
+  },
+  {
+   "id": "w17",
+   "imie": "Natalia Zając",
+   "pesel": "44103888713",
+   "email": "natalia.zajac@firmademo.example",
+   "telefon": "+48 500 100 116",
+   "dzial": "Obsługa klienta",
+   "stanowisko": "Konsultant",
+   "level": 2,
+   "miasto": "Kraków",
+   "rok": 2022,
+   "pensja": 7793
+  },
+  {
+   "id": "w18",
+   "imie": "Rafał Król",
+   "pesel": "18438216501",
+   "email": "rafał.krol@firmademo.example",
+   "telefon": "+48 500 100 117",
+   "dzial": "Obsługa klienta",
+   "stanowisko": "Konsultant",
+   "level": 1,
+   "miasto": "Gdańsk",
+   "rok": 2025,
+   "pensja": 6654
+  },
+  {
+   "id": "w19",
+   "imie": "Karolina Wieczorek",
+   "pesel": "25033950231",
+   "email": "karolina.wieczorek@firmademo.example",
+   "telefon": "+48 500 100 118",
+   "dzial": "Obsługa klienta",
+   "stanowisko": "Team Leader",
+   "level": 3,
+   "miasto": "Warszawa",
+   "rok": 2020,
+   "pensja": 10137
+  },
+  {
+   "id": "w20",
+   "imie": "Adrian Jabłoński",
+   "pesel": "78139431180",
+   "email": "adrian.jabłonski@firmademo.example",
+   "telefon": "+48 500 100 119",
+   "dzial": "HR",
+   "stanowisko": "Specjalista HR",
+   "level": 2,
+   "miasto": "Warszawa",
+   "rok": 2022,
+   "pensja": 8690
+  },
+  {
+   "id": "w21",
+   "imie": "Dorota Majewska",
+   "pesel": "62557385125",
+   "email": "dorota.majewska@firmademo.example",
+   "telefon": "+48 500 100 120",
+   "dzial": "HR",
+   "stanowisko": "HR Business Partner",
+   "level": 4,
+   "miasto": "Warszawa",
+   "rok": 2019,
+   "pensja": 15101
+  },
+  {
+   "id": "w22",
+   "imie": "Marek Olszewski",
+   "pesel": "69929614144",
+   "email": "marek.olszewski@firmademo.example",
+   "telefon": "+48 500 100 121",
+   "dzial": "HR",
+   "stanowisko": "Specjalista ds. płac",
+   "level": 3,
+   "miasto": "Warszawa",
+   "rok": 2021,
+   "pensja": 10874
+  },
+  {
+   "id": "w23",
+   "imie": "Beata Stępień",
+   "pesel": "77533502012",
+   "email": "beata.stepien@firmademo.example",
+   "telefon": "+48 500 100 122",
+   "dzial": "HR",
+   "stanowisko": "Rekruter",
+   "level": 2,
+   "miasto": "Kraków",
+   "rok": 2023,
+   "pensja": 8362
+  },
+  {
+   "id": "w24",
+   "imie": "Izabela Jaworska",
+   "pesel": "09582585221",
+   "email": "izabela.jaworska@firmademo.example",
+   "telefon": "+48 500 100 123",
+   "dzial": "Finanse",
+   "stanowisko": "Główny księgowy",
+   "level": 5,
+   "miasto": "Warszawa",
+   "rok": 2017,
+   "pensja": 19842
+  },
+  {
+   "id": "w25",
+   "imie": "Robert Kaczmarek",
+   "pesel": "58074108215",
+   "email": "robert.kaczmarek@firmademo.example",
+   "telefon": "+48 500 100 124",
+   "dzial": "Zarząd",
+   "stanowisko": "Prezes",
+   "level": 9,
+   "miasto": "Warszawa",
+   "rok": 2015,
+   "pensja": 58000
+  }
+ ]
+};</script>
+<script>/* Czysta logika wykladu M1 (bez DOM): przeksztalcenia danych, wielkosc grup, werdykt, przepisy Excela. */
+(function (g) {
+  "use strict";
+  var PROG = 3, ID_PREZESA = "w25", ZIARNO = 20261115;
+  // Kolumny w kolejnosci A-J jak w zakladce "1 Oryginał" w demo
+  var KOLUMNY = [
+    { id: "imie", nazwa: "Imię i nazwisko", typ: "bezposredni" }, { id: "pesel", nazwa: "PESEL", typ: "bezposredni" },
+    { id: "email", nazwa: "E-mail", typ: "bezposredni" }, { id: "telefon", nazwa: "Telefon", typ: "bezposredni" },
+    { id: "dzial", nazwa: "Dział", typ: "posredni" }, { id: "stanowisko", nazwa: "Stanowisko", typ: "posredni" },
+    { id: "level", nazwa: "Level", typ: "posredni" }, { id: "miasto", nazwa: "Miasto", typ: "posredni" },
+    { id: "rok", nazwa: "Rok zatrudnienia", typ: "posredni" }, { id: "pensja", nazwa: "Wynagrodzenie", typ: "cel" }
+  ];
+  var IDENT = ["imie", "pesel", "email", "telefon"], POSREDNIE = ["dzial", "stanowisko", "level", "miasto", "rok"];
+  var NEEDED = ["dzial", "level", "pensja"];
+  var AKCJE = {
+    imie: ["zostaw", "usun", "kod"], pesel: ["zostaw", "usun", "kod"], email: ["zostaw", "usun", "kod"], telefon: ["zostaw", "usun", "kod"],
+    dzial: ["zostaw", "usun", "polacz", "polacz_ukryj"], stanowisko: ["zostaw", "usun"], level: ["zostaw", "usun", "przedzialy"],
+    miasto: ["zostaw", "usun"], rok: ["zostaw", "usun", "rok_przedzialy"], pensja: ["zostaw", "zaokr100", "zaokr1000", "usun"]
+  };
+  var NAZWY_AKCJI = { zostaw: "zostaw", usun: "usuń", kod: "zamień na kod", polacz: "połącz małe działy", polacz_ukryj: "połącz małe działy i ukryj dział dla levelu 4+",
+    przedzialy: "uogólnij do przedziałów (1–3, 4+)", rok_przedzialy: "uogólnij do przedziałów", zaokr100: "zaokrąglij do 100 zł", zaokr1000: "zaokrąglij do 1000 zł" };
+  var DOMYSLNE = {}; KOLUMNY.forEach(function (k) { DOMYSLNE[k.id] = "zostaw"; });
+  var ROZWIAZANIE_WZOROWE = { imie: "usun", pesel: "usun", email: "usun", telefon: "usun", dzial: "polacz_ukryj", stanowisko: "usun", level: "przedzialy", miasto: "usun", rok: "usun", pensja: "zaokr100" };
+
+  function mulberry32(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; var t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  function tasuj(tab, ziarno) { var los = mulberry32(ziarno), t = tab.slice(); for (var i = t.length - 1; i > 0; i--) { var j = Math.floor(los() * (i + 1)); var x = t[i]; t[i] = t[j]; t[j] = x; } return t; }
+
+  function malyDzial(d) { return d === "HR" || d === "Finanse" ? "Pozostałe" : d; }
+  // Wartosc kolumny po zastosowaniu akcji (level i dzial z ORYGINALU, bo polacz_ukryj zalezy od levelu)
+  function wartosc(kol, akcja, o) {
+    if (kol === "dzial") { if (akcja === "polacz_ukryj" && o.level >= 4) return "Wszystkie działy (4+)"; if (akcja === "polacz" || akcja === "polacz_ukryj") return malyDzial(o.dzial); }
+    if (kol === "level" && akcja === "przedzialy") return o.level <= 3 ? "1-3" : "4+";
+    if (kol === "rok" && akcja === "rok_przedzialy") return o.rok <= 2020 ? "do 2020" : (o.rok <= 2023 ? "2021–2023" : "od 2024");
+    if (kol === "pensja" && akcja === "zaokr100") return Math.round(o.pensja / 100) * 100;
+    if (kol === "pensja" && akcja === "zaokr1000") return Math.round(o.pensja / 1000) * 1000;
+    return o[kol];
+  }
+
+  function zastosuj(osoby, u, usuniete, ziarno) {
+    usuniete = usuniete || [];
+    var kolumny = KOLUMNY.map(function (k) { return k.id; }).filter(function (id) { return u[id] !== "usun"; });
+    var perm = tasuj(osoby.map(function (_, i) { return i + 1; }), ziarno || ZIARNO), kodyOsob = {};
+    osoby.forEach(function (o, i) { kodyOsob[o.id] = "P" + ("00" + perm[i]).slice(-3); });
+    var wiersze = osoby.filter(function (o) { return usuniete.indexOf(o.id) < 0; }).map(function (o) {
+      var w = {}; kolumny.forEach(function (id) { w[id] = u[id] === "kod" ? kodyOsob[o.id] : wartosc(id, u[id], o); });
+      return { id: o.id, wartosci: w };
+    });
+    var mapa = [];
+    if (IDENT.some(function (id) { return u[id] === "kod"; })) {
+      mapa = osoby.filter(function (o) { return usuniete.indexOf(o.id) < 0; }).map(function (o) { return { kod: kodyOsob[o.id], osoba: o.imie }; }).sort(function (a, b) { return a.kod < b.kod ? -1 : 1; });
+    }
+    return { kolumny: kolumny, wiersze: wiersze, mapaKodow: mapa };
+  }
+
+  // Grupowanie po zmiennych posrednich i zachowanych identyfikatorach (kazdy identyfikator/kod czyni wiersz unikalnym)
+  function wielkosciGrup(w) {
+    var kl = w.kolumny.filter(function (id) { return POSREDNIE.indexOf(id) >= 0 || IDENT.indexOf(id) >= 0; });
+    var mapaG = {}, kolejnosc = [];
+    w.wiersze.forEach(function (r) { var k = kl.map(function (id) { return r.wartosci[id]; }).join("|"); if (!mapaG[k]) { mapaG[k] = []; kolejnosc.push(k); } mapaG[k].push(r.id); });
+    var grupy = kolejnosc.map(function (k) { return { klucz: k, rozmiar: mapaG[k].length, ids: mapaG[k] }; });
+    var hist = { "1": 0, "2": 0, "3+": 0 };
+    grupy.forEach(function (gr) { hist[gr.rozmiar >= 3 ? "3+" : String(gr.rozmiar)] += gr.rozmiar; });
+    var min = grupy.length ? Math.min.apply(null, grupy.map(function (gr) { return gr.rozmiar; })) : null;
+    return { grupy: grupy, hist: hist, minRozmiar: min };
+  }
+
+  function werdykt(w, u) {
+    var ostrz = []; if (u.pensja === "zostaw") ostrz.push("Dokładna kwota działa jak odcisk palca: zaokrąglij ją.");
+    if (!w.wiersze.length) return { kod: "pusty", tekst: "Brak wierszy.", ostrzezenia: ostrz };
+    if (!w.kolumny.length) return { kod: "pusty", tekst: "Brak kolumn: plik jest pusty, nie ma czego oceniać.", ostrzezenia: ostrz };
+    if (IDENT.some(function (id) { return u[id] === "zostaw"; })) return { kod: "osobowe", tekst: "Dane osobowe: został identyfikator bezpośredni (imię i nazwisko, PESEL, e-mail lub telefon).", ostrzezenia: ostrz };
+    if (IDENT.some(function (id) { return u[id] === "kod"; })) return { kod: "pseudonim", tekst: "Pseudonimizacja: nadal dane osobowe, bo istnieje mapa kodów.", ostrzezenia: ostrz };
+    var gg = wielkosciGrup(w);
+    if (gg.minRozmiar < PROG) return { kod: "uwaga", tekst: "Uwaga: są osoby same lub w parach, czyli łatwo wskazać człowieka.", ostrzezenia: ostrz };
+    return { kod: "ok", tekst: "Spełnia regułę 3 osób (to reguła kciuka, nie przepis).", ostrzezenia: ostrz };
+  }
+
+  function kontrolaCelu(u) {
+    return {
+      zbedne: KOLUMNY.map(function (k) { return k.id; }).filter(function (id) { return NEEDED.indexOf(id) < 0 && u[id] !== "usun"; }),
+      brakujace: NEEDED.filter(function (id) { return u[id] === "usun"; })
+    };
+  }
+
+  var KLUCZ = { imie: "wprost", pesel: "wprost", email: "wprost", telefon: "wprost", dzial: "posrednio", stanowisko: "posrednio", level: "posrednio", miasto: "posrednio", rok: "posrednio", pensja: "posrednio" };
+  function klasyfikujKolumny(odp) {
+    var bledne = Object.keys(KLUCZ).filter(function (k) { return odp[k] !== KLUCZ[k]; });
+    return { poprawne: Object.keys(KLUCZ).length - bledne.length, bledne: bledne };
+  }
+
+  var PRZEPISY = {
+    usun: { pl: "", en: "", kroki: "Prawy przycisk na nagłówku kolumny → Usuń. Pracuj na kopii pliku." },
+    zostaw: { pl: "", en: "", kroki: "Bez zmian." },
+    kod: { pl: "=LOS()", en: "=RAND()", kroki: "Dodaj kolumnę z =LOS(), wklej jako wartości, posortuj po niej i ponumeruj P001, P002…. Mapę kod → osoba zapisz w OSOBNYM pliku (ukryty arkusz to nie osobny plik). Potem usuń kolumny z danymi osobowymi." },
+    polacz: { pl: '=JEŻELI(LUB(E5="HR";E5="Finanse");"Pozostałe";E5)', en: '=IF(OR(E5="HR",E5="Finanse"),"Pozostałe",E5)', kroki: "Nowa kolumna z formułą, przeciągnij w dół, wklej jako wartości, usuń starą kolumnę Dział." },
+    polacz_ukryj: { pl: '=JEŻELI(G5>=4;"Wszystkie działy (4+)";JEŻELI(LUB(E5="HR";E5="Finanse");"Pozostałe";E5))', en: '=IF(G5>=4,"Wszystkie działy (4+)",IF(OR(E5="HR",E5="Finanse"),"Pozostałe",E5))', kroki: "Formuła w nowej kolumnie (korzysta z levelu w kolumnie G, więc wykonaj ją PRZED uogólnieniem levelu). Wklej jako wartości." },
+    przedzialy: { pl: '=JEŻELI(G5<=3;"1-3";"4+")', en: '=IF(G5<=3,"1-3","4+")', kroki: "Formuła w nowej kolumnie, przeciągnij w dół, wklej jako wartości, usuń starą kolumnę Level." },
+    rok_przedzialy: { pl: '=JEŻELI(I5<=2020;"do 2020";JEŻELI(I5<=2023;"2021–2023";"od 2024"))', en: '=IF(I5<=2020,"do 2020",IF(I5<=2023,"2021–2023","od 2024"))', kroki: "Formuła w nowej kolumnie, wklej jako wartości, usuń starą kolumnę." },
+    zaokr100: { pl: "=ZAOKR(J5;-2)", en: "=ROUND(J5,-2)", kroki: "Formuła w nowej kolumnie, przeciągnij w dół, wklej jako wartości, usuń starą kolumnę Wynagrodzenie." },
+    zaokr1000: { pl: "=ZAOKR(J5;-3)", en: "=ROUND(J5,-3)", kroki: "Formuła w nowej kolumnie, przeciągnij w dół, wklej jako wartości, usuń starą kolumnę Wynagrodzenie." }
+  };
+  function przepisExcel(kol, akcja) { var p = PRZEPISY[akcja] || PRZEPISY.zostaw; return { pl: p.pl, en: p.en, kroki: p.kroki }; }
+  function przepisTestGrup() { return { pl: "=LICZ.WARUNKI(E:E;E5;G:G;G5)", en: "=COUNTIFS(E:E,E5,G:G,G5)", kroki: "Dla wybranych kolumn (tu: dział i level) policz wiersze o tych samych wartościach. Formatowanie warunkowe: wartości mniejsze niż 3 na czerwono." }; }
+
+  var API = { PROG: PROG, ID_PREZESA: ID_PREZESA, KOLUMNY: KOLUMNY, IDENT: IDENT, POSREDNIE: POSREDNIE, NEEDED: NEEDED, AKCJE: AKCJE, NAZWY_AKCJI: NAZWY_AKCJI, DOMYSLNE: DOMYSLNE,
+    ROZWIAZANIE_WZOROWE: ROZWIAZANIE_WZOROWE, zastosuj: zastosuj, wielkosciGrup: wielkosciGrup, werdykt: werdykt, kontrolaCelu: kontrolaCelu,
+    klasyfikujKolumny: klasyfikujKolumny, przepisExcel: przepisExcel, przepisTestGrup: przepisTestGrup, mulberry32: mulberry32, tasuj: tasuj };
+  g.WykladLogika = API; if (typeof module !== "undefined" && module.exports) module.exports = API;
+})(typeof window !== "undefined" ? window : globalThis);
+</script>
+<script>/* Interfejs wykladu M1: nawigacja rozdzialami i obsluga rozdzialow. */
+(function () {
+  "use strict";
+  var L = window.WykladLogika, OSOBY = window.DANE_DEMO.osoby;
+  var Wyklad = window.Wyklad = { stan: { ustawienia: Object.assign({}, L.DOMYSLNE), usuniete: [] }, rejestr: [], pokaz: pokaz, przelicz: przelicz };
+  function przelicz() { Wyklad.rejestr.forEach(function (f) { f(); }); }
+  var $ = function (s, r) { return (r || document).querySelector(s); }, $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  // ---------- nawigacja ----------
+  function numery() { return $$("main > section[data-nr]").map(function (s) { return +s.dataset.nr; }).sort(function (a, b) { return a - b; }); }
+  function zHasha() { var m = /^#(\d+)$/.exec(location.hash); return m ? +m[1] : 1; }
+  function pokaz(n) {
+    var lista = numery(); if (lista.indexOf(n) < 0) n = lista[0];
+    $$("main > section[data-nr]").forEach(function (s) { s.hidden = +s.dataset.nr !== n; });
+    var i = lista.indexOf(n);
+    $("#postep").textContent = "Rozdział " + (i + 1) + " z " + lista.length;
+    $("#wstecz").disabled = i === 0; $("#dalej").disabled = i === lista.length - 1;
+    Wyklad.biezacy = n; przelicz();
+  }
+  function idz(krok) { var lista = numery(), i = lista.indexOf(Wyklad.biezacy) + krok; if (i < 0 || i >= lista.length) return; location.hash = "#" + lista[i]; pokaz(lista[i]); window.scrollTo && window.scrollTo(0, 0); }
+  $("#dalej").addEventListener("click", function () { idz(1); });
+  $("#wstecz").addEventListener("click", function () { idz(-1); });
+  window.addEventListener("hashchange", function () { pokaz(zHasha()); });
+
+  // ---------- rozdzial 1: klasyfikacja kolumn ----------
+  var STANY = ["", "wprost", "posrednio", "nie"], ETYKIETY = { "": "nie oznaczono", wprost: "wprost", posrednio: "pośrednio", nie: "nie identyfikuje" };
+  var odp = {};
+  function kwota(x) { return String(x).replace(/\B(?=(\d{3})+(?!\d))/g, " "); }
+  (function () {
+    var tr = $("#tabela-oryg thead tr");
+    L.KOLUMNY.forEach(function (k, i) {
+      var th = document.createElement("th"); th.scope = "col";
+      th.innerHTML = '<span class="lit">' + String.fromCharCode(65 + i) + '</span><button type="button" class="kl" data-kol="' + k.id + '" data-stan="">' + k.nazwa + '<span class="stan">nie oznaczono</span></button>';
+      tr.appendChild(th);
+    });
+    var tb = $("#tabela-oryg tbody");
+    OSOBY.forEach(function (o) {
+      var r = document.createElement("tr"); if (o.id === L.ID_PREZESA) r.className = "prezes";
+      r.innerHTML = L.KOLUMNY.map(function (k) { return "<td>" + (k.id === "pensja" ? kwota(o[k.id]) : o[k.id]) + "</td>"; }).join("");
+      tb.appendChild(r);
+    });
+    $$("button.kl", $("#tabela-oryg")).forEach(function (b) {
+      b.addEventListener("click", function () {
+        var nast = STANY[(STANY.indexOf(b.dataset.stan) + 1) % STANY.length];
+        b.dataset.stan = nast; odp[b.dataset.kol] = nast || undefined; $(".stan", b).textContent = ETYKIETY[nast];
+      });
+    });
+    $("#sprawdz-kl").addEventListener("click", function () {
+      var w = L.klasyfikujKolumny(odp), el = $("#wynik-kl"), n = L.KOLUMNY.length;
+      var nazwy = w.bledne.map(function (id) { return L.KOLUMNY.filter(function (k) { return k.id === id; })[0].nazwa; });
+      el.textContent = "Poprawnie " + w.poprawne + " z " + n + "." + (nazwy.length ? " Do poprawy: " + nazwy.join(", ") + "." : " Brawo.") +
+        " Wyróżniony wiersz: level 9, Zarząd, Warszawa, 58 000 zł. Nikt nie potrzebuje imienia, żeby wiedzieć, kto to jest.";
+      var p = $("#tabela-oryg tr.prezes"); if (p) p.classList.add("wyrozniony");
+    });
+  })();
+
+  // ---------- wspolne: stan i renderowanie ----------
+  function nazwaKol(id) { return L.KOLUMNY.filter(function (k) { return k.id === id; })[0].nazwa; }
+  function wynik() { var st = Wyklad.stan; return L.zastosuj(OSOBY, st.ustawienia, st.usuniete); }
+  function ustaw(kol, akcja) { Wyklad.stan.ustawienia[kol] = akcja; przelicz(); }
+  function tekst(el, t) { el.textContent = t; }
+  function werdyktHtml(el, v) {
+    el.className = "werdykt w-" + v.kod; el.textContent = v.tekst;
+  }
+  function tabela(tb, kolumny, wiersze, dodaj) {
+    tb.innerHTML = "";
+    wiersze.forEach(function (r) {
+      var tr = document.createElement("tr"); tr.dataset.id = r.id;
+      tr.innerHTML = kolumny.map(function (id) { var v = r.wartosci[id]; return "<td>" + (id === "pensja" ? kwota(v) : v) + "</td>"; }).join("");
+      if (dodaj) dodaj(tr, r); tb.appendChild(tr);
+    });
+  }
+  function naglowki(thead, kolumny, extra) {
+    thead.innerHTML = "<tr>" + kolumny.map(function (id) { return '<th scope="col">' + nazwaKol(id) + "</th>"; }).join("") + (extra ? '<th scope="col">' + extra + "</th>" : "") + "</tr>";
+  }
+  function mapaKodow(w) {
+    var det = $("#mapa-kodow"), tb = $("tbody", det);
+    det.hidden = !w.mapaKodow.length; tb.innerHTML = "";
+    w.mapaKodow.forEach(function (m) { var tr = document.createElement("tr"); tr.innerHTML = "<td>" + m.kod + "</td><td>" + m.osoba + "</td>"; tb.appendChild(tr); });
+  }
+
+  // ---------- rozdzial 2: pseudonimizacja ----------
+  $("#kody-wszystkie").addEventListener("click", function () {
+    L.IDENT.forEach(function (id) { Wyklad.stan.ustawienia[id] = "kod"; }); przelicz();
+  });
+  Wyklad.rejestr.push(function () {
+    var w = wynik(); naglowki($("#tabela-pseudo thead"), w.kolumny);
+    tabela($("#tabela-pseudo tbody"), w.kolumny, w.wiersze);
+    werdyktHtml($("#werdykt-2"), L.werdykt(w, Wyklad.stan.ustawienia));
+    mapaKodow(w);
+  });
+
+  // ---------- rozdzial 3: symulator ----------
+  (function () {
+    var st = $("#sterowanie");
+    L.KOLUMNY.forEach(function (k) {
+      var d = document.createElement("div"), id = "sel-" + k.id;
+      var opcje = L.AKCJE[k.id].map(function (a) { return '<option value="' + a + '">' + L.NAZWY_AKCJI[a] + "</option>"; }).join("");
+      d.innerHTML = '<label for="' + id + '">' + k.nazwa + '</label><select id="' + id + '" data-kol="' + k.id + '">' + opcje + "</select>";
+      st.appendChild(d);
+      $("select", d).addEventListener("change", function (e) { ustaw(k.id, e.target.value); });
+    });
+    $("#reset").addEventListener("click", function () { Wyklad.stan.ustawienia = Object.assign({}, L.DOMYSLNE); Wyklad.stan.usuniete = []; przelicz(); });
+  })();
+  function siatka(w) {
+    var t = $("#siatka");
+    if (w.kolumny.indexOf("dzial") < 0 || w.kolumny.indexOf("level") < 0) { t.innerHTML = "<tbody><tr><td>Siatka pojawi się, gdy zostawisz obie kolumny: Dział i Level.</td></tr></tbody>"; return; }
+    var dz = [], lv = [], c = {};
+    w.wiersze.forEach(function (r) { var a = r.wartosci.dzial, b = r.wartosci.level; if (dz.indexOf(a) < 0) dz.push(a); if (lv.indexOf(b) < 0) lv.push(b); c[a + "|" + b] = (c[a + "|" + b] || 0) + 1; });
+    lv.sort(function (a, b) { return String(a).localeCompare(String(b), "pl", { numeric: true }); }); dz.sort();
+    var h = '<thead><tr><th scope="col">Dział \\ Level</th>' + lv.map(function (x) { return '<th scope="col">' + x + "</th>"; }).join("") + "</tr></thead><tbody>";
+    dz.forEach(function (a) {
+      h += '<tr><th scope="row">' + a + "</th>" + lv.map(function (b) {
+        var n = c[a + "|" + b]; if (!n) return "<td>–</td>";
+        var k = n === 1 ? "g1" : n === 2 ? "g2" : "g3", et = n === 1 ? "sam" : n === 2 ? "2 osoby" : "3+";
+        return '<td class="' + k + '">' + n + " (" + et + ")</td>";
+      }).join("") + "</tr>";
+    });
+    t.innerHTML = h + "</tbody>";
+  }
+  function excel(u) {
+    var pl = $("#excel-pl"), en = $("#excel-en"), kr = $("#excel-kroki"); pl.innerHTML = en.innerHTML = kr.innerHTML = "";
+    var byloCos = false;
+    L.KOLUMNY.forEach(function (k) {
+      var a = u[k.id]; if (a === "zostaw") return; byloCos = true;
+      var p = L.przepisExcel(k.id, a);
+      if (p.pl) { [[pl, p.pl], [en, p.en]].forEach(function (x) { var d = document.createElement("p"); d.innerHTML = "<strong>" + k.nazwa + ":</strong> <code></code>"; $("code", d).textContent = x[1]; x[0].appendChild(d); }); }
+      var li = document.createElement("li"); li.textContent = k.nazwa + ": " + p.kroki; kr.appendChild(li);
+    });
+    if (!byloCos) { pl.textContent = en.textContent = "Wybierz coś w ustawieniach kolumn, a pojawi się przepis."; }
+    var tg = L.przepisTestGrup(), li2 = document.createElement("li"); li2.textContent = "Test grup: " + tg.pl + " (po angielsku " + tg.en + "). " + tg.kroki; kr.appendChild(li2);
+  }
+  Wyklad.rejestr.push(function () {
+    var st = Wyklad.stan, u = st.ustawienia, w = wynik(), v = L.werdykt(w, u), g = L.wielkosciGrup(w);
+    L.KOLUMNY.forEach(function (k) { var s = $("#sel-" + k.id); if (s) s.value = u[k.id]; });
+    naglowki($("#tabela-wynik thead"), w.kolumny, "Usuń wiersz");
+    tabela($("#tabela-wynik tbody"), w.kolumny, w.wiersze, function (tr, r) {
+      var td = document.createElement("td"), b = document.createElement("button"); b.type = "button"; b.dataset.usun = r.id; b.textContent = "Usuń";
+      b.setAttribute("aria-label", "Usuń wiersz " + r.id); b.addEventListener("click", function () { st.usuniete.push(r.id); przelicz(); });
+      td.appendChild(b); tr.appendChild(td);
+    });
+    tekst($("#info-usuniete"), st.usuniete.length ? "Usunięto wierszy: " + st.usuniete.length + " z " + OSOBY.length + "." : "Wszystkie " + OSOBY.length + " wierszy na miejscu.");
+    werdyktHtml($("#werdykt"), v);
+    var ul = $("#ostrzezenia"); ul.innerHTML = ""; v.ostrzezenia.forEach(function (t) { var li = document.createElement("li"); li.textContent = t; ul.appendChild(li); });
+    tekst($("#hist-1"), g.hist["1"]); tekst($("#hist-2"), g.hist["2"]); tekst($("#hist-3"), g.hist["3+"]);
+    var c = L.kontrolaCelu(u), t = [];
+    if (c.zbedne.length) t.push("Zbędne do celu (usuń): " + c.zbedne.map(nazwaKol).join(", ") + ".");
+    if (c.brakujace.length) t.push("Brakuje do celu: " + c.brakujace.map(nazwaKol).join(", ") + ".");
+    tekst($("#cel-kontrola"), t.length ? t.join(" ") : "Cel osiągnięty: zostały tylko kolumny potrzebne do pytania.");
+    siatka(w); excel(u); mapaKodow(w);
+  });
+
+  pokaz(zHasha());
+})();
+</script>
+</body></html>
