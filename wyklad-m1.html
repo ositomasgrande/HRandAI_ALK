@@ -86,7 +86,24 @@ tr.wyrozniony td{background:#FFF2CC;font-weight:700}
 .wid-2{display:grid;gap:1rem;grid-template-columns:1fr}
 @media(min-width:60rem){.wid-2{grid-template-columns:1fr 1fr}.sterowanie{grid-template-columns:1fr 1fr}}
 tr.podejrzany td{background:#F4B6BE;color:#5b0d19}
-#tabela-syn button{min-height:44px;background:transparent;border:1px solid var(--b5);color:inherit}
+/* Rozdzial 5: pola wyboru, kafelki stanu i podswietlenie odpowiedzi */
+#tabela-syn tbody tr{cursor:pointer}
+#tabela-syn td.wyb{text-align:center}
+#tabela-syn input[type=checkbox]{width:1.5rem;height:1.5rem;accent-color:var(--czerw);cursor:pointer}
+.kafelki-syn{list-style:none;padding:0;margin:1rem 0;display:grid;gap:.5rem;grid-template-columns:1fr}
+.kafelki-syn li{background:#fff;border:2px solid var(--b3);border-radius:6px;padding:.6rem .8rem}
+.kafelki-syn .stan{display:block;font-size:.9rem;color:var(--szary)}
+.kafelki-syn li[data-stan="ok"]{border-color:#1b6b34;background:#BFE3C6}
+.kafelki-syn li[data-stan="ok"] .stan{color:#0b3d1a;font-weight:700}
+.kafelki-syn li[data-stan="brak"]{border:2px dashed var(--czerw)}
+.kafelki-syn li[data-stan="brak"] .stan{color:#7d1423;font-weight:700}
+.kafelki-syn li[data-stan="odp"]{border-color:var(--granat);background:#FFF2CC}
+.kafelki-syn li[data-stan="odp"] .stan{color:var(--granat);font-weight:700}
+@media(min-width:40rem){.kafelki-syn{grid-template-columns:repeat(3,1fr)}}
+tr.odp td{box-shadow:inset 0 3px 0 var(--czerw),inset 0 -3px 0 var(--czerw);font-weight:700}
+.etyk{display:block;width:max-content;max-width:9.5rem;margin-top:.2rem;padding:.1rem .45rem;border-radius:4px;background:var(--granat);color:#fff;font-size:.8rem;font-weight:700}
+@media(min-width:60rem){#r5 .wid-2{grid-template-columns:2fr 1fr}}
+#odp-syn:empty{display:none}
 </style></head><body>
 <a class="skip" href="#tresc">Przejdź do treści</a>
 <header class="top"><div class="in"><h1>Wykład M1: przygotowanie danych do pracy z AI</h1><p>Pseudonimizacja, anonimizacja i dane syntetyczne. Zajęcia 15.11.2026, Akademia Leona Koźmińskiego. Wszystkie dane na tej stronie są wymyślone.</p></div></header>
@@ -153,11 +170,13 @@ tr.podejrzany td{background:#F4B6BE;color:#5b0d19}
 <ul class="kontrola"><li><strong>Liczba wierszy</strong> zgadza się z opisem, który podałeś.</li><li><strong>Widełki płac</strong> mieszczą się w zakresie, o który prosiłeś.</li><li><strong>Identyfikatory są unikalne</strong>, nic się nie powtarza.</li><li><strong>Rozkłady</strong> (np. udział działów i levelów) odpowiadają opisowi.</li></ul>
 <p>Pamiętaj: wnioski z danych syntetycznych nie dotyczą prawdziwej firmy. Służą do testowania promptów i dashboardów.</p>
 <h3>Znajdź błędy w zbiorze, który zwróciło AI</h3>
-<p>Poprosiłeś o <strong>20 wierszy</strong>. W zbiorze są <strong>3 błędy</strong>. Kliknij podejrzane wiersze (jeszcze raz, by odznaczyć), wpisz, ile wierszy naprawdę dostałeś, i sprawdź.</p>
-<div class="wid-2"><div class="tab" tabindex="0" role="region" aria-label="Zbiór syntetyczny do sprawdzenia"><table id="tabela-syn"><thead><tr><th scope="col">ID</th><th scope="col">Dział</th><th scope="col">Level</th><th scope="col">Płeć</th><th scope="col">Staż</th><th scope="col">Wynagrodzenie</th></tr></thead><tbody></tbody></table></div>
+<p>Poprosiłeś o <strong>20 wierszy</strong>. W zbiorze są <strong>3 błędy</strong>. Zaznacz podejrzane wiersze w kolumnie „Podejrzany?”, wpisz, ile wierszy naprawdę dostałeś, i kliknij „Sprawdź”.</p>
+<ul class="kafelki-syn" aria-label="Trzy błędy do znalezienia"><li id="kaf-liczba" data-stan="nie"><strong>1. Liczba wierszy</strong><span class="stan">nie sprawdzono</span></li><li id="kaf-id" data-stan="nie"><strong>2. Powtórzone ID</strong><span class="stan">nie sprawdzono</span></li><li id="kaf-poza" data-stan="nie"><strong>3. Pensja poza widełkami</strong><span class="stan">nie sprawdzono</span></li></ul>
+<div class="wid-2"><div class="tab" tabindex="0" role="region" aria-label="Zbiór syntetyczny do sprawdzenia"><table id="tabela-syn"><thead><tr><th scope="col">Podejrzany?</th><th scope="col">ID</th><th scope="col">Dział</th><th scope="col">Level</th><th scope="col">Płeć</th><th scope="col">Staż</th><th scope="col">Wynagrodzenie</th></tr></thead><tbody></tbody></table></div>
 <div class="tab" tabindex="0" role="region" aria-label="Widełki płac per level"><table><thead><tr><th scope="col">Level</th><th scope="col">Widełki (PLN)</th></tr></thead><tbody><tr><td>1</td><td>6 200–8 200</td></tr><tr><td>2</td><td>8 000–10 800</td></tr><tr><td>3</td><td>10 500–14 500</td></tr><tr><td>4</td><td>14 000–19 000</td></tr><tr><td>5</td><td>18 000–24 000</td></tr></tbody></table></div></div>
-<p><label for="liczba-syn">Ile wierszy dostałeś?</label> <input type="number" id="liczba-syn" min="0" max="999" inputmode="numeric"> <button type="button" id="sprawdz-syn">Sprawdź</button></p>
+<p><label for="liczba-syn">Ile wierszy dostałeś?</label> <input type="number" id="liczba-syn" min="0" max="999" inputmode="numeric"> <button type="button" id="sprawdz-syn">Sprawdź</button> <button type="button" id="pokaz-odp-syn" class="jasny">Pokaż odpowiedzi</button></p>
 <div id="wynik-syn" class="werdykt" aria-live="polite"></div>
+<div id="odp-syn" class="werdykt" aria-live="polite"></div>
 <div class="pytanie-sali"><strong>Pytanie do sali:</strong> Ile wierszy dostałeś, a ile prosiłeś? Co jeszcze warto policzyć, zanim zaufasz zbiorowi?</div>
 </section>
 <section id="r6" class="rozdzial" data-nr="6" aria-labelledby="t6" hidden>
@@ -991,24 +1010,64 @@ tr.podejrzany td{background:#F4B6BE;color:#5b0d19}
   (function () {
     var SYN = window.DANE_DEMO.syntetyk || [], zazn = {}, PROSILEM = 20;
     var tb = $("#tabela-syn tbody");
+    // Wzorcowe odpowiedzi liczy logika (liczba wierszy, powtorzone ID, pensje poza widelkami)
+    var k = L.kontrolaSyntetyku(SYN, PROSILEM);
+    var SZUKAJ = "✗ szukaj dalej";
+
+    // Odmiana: "1 wiersza", "5 wierszy"
+    function wierszy(n) { return n + (n === 1 ? " wiersza" : " wierszy"); }
+    // Widelki levelu jako tekst, np. "8 000–10 800"
+    function widelki(level) { var w = L.WIDELKI_SYN[level]; return w ? kwota(w[0]) + "–" + kwota(w[1]) : "brak"; }
+    // Ustawia jeden z trzech kafelkow stanu nad tabela (stan: nie / ok / brak / odp)
+    function kafelek(id, stan, opis) { var el = $("#" + id); el.dataset.stan = stan; tekst($(".stan", el), opis); }
+    // Dopisuje etykiete z wyjasnieniem do wskazanej komorki wiersza
+    function etykieta(tr, komorka, opis) { var s = document.createElement("span"); s.className = "etyk"; s.textContent = opis; $(komorka, tr).appendChild(s); }
+
+    // Tabela: pole wyboru w pierwszej kolumnie; klik w dowolne miejsce wiersza tez go zaznacza
     SYN.forEach(function (r, i) {
       var tr = document.createElement("tr"); tr.dataset.id = r.id; tr.dataset.i = i;
-      tr.innerHTML = '<td><button type="button" aria-pressed="false" aria-label="Oznacz wiersz ' + r.id + ' jako podejrzany">' + r.id + "</button></td><td>" + r.dzial + "</td><td>" + r.level + "</td><td>" + r.plec + "</td><td>" + r.staz + "</td><td>" + kwota(r.pensja) + "</td>";
-      tr.addEventListener("click", function () { zazn[i] = !zazn[i]; tr.classList.toggle("podejrzany", !!zazn[i]); $("button", tr).setAttribute("aria-pressed", zazn[i] ? "true" : "false"); });
+      tr.innerHTML = '<td class="wyb"><input type="checkbox" aria-label="Oznacz wiersz ' + (i + 1) + " (" + r.id + ') jako podejrzany"></td><td class="k-id">' + r.id + "</td><td>" + r.dzial + "</td><td>" + r.level + "</td><td>" + r.plec + "</td><td>" + r.staz + '</td><td class="k-pensja">' + kwota(r.pensja) + "</td>";
+      var pole = $("input", tr);
+      function ustaw(v) { zazn[i] = v; pole.checked = v; tr.classList.toggle("podejrzany", v); }
+      // Klik w samo pole: przegladarka juz je przelaczyla, wiec tylko odczytujemy stan
+      tr.addEventListener("click", function (e) { ustaw(e.target === pole ? pole.checked : !zazn[i]); });
       tb.appendChild(tr);
     });
+
+    // "Sprawdz": liczy trafienia, aktualizuje kafelki i komunikat
     $("#sprawdz-syn").addEventListener("click", function () {
-      var k = L.kontrolaSyntetyku(SYN, PROSILEM), znalezione = 0, zbedne = 0, ids = SYN.map(function (r) { return r.id; });
-      var wyb = Object.keys(zazn).filter(function (i) { return zazn[i]; }).map(function (i) { return ids[+i]; });
+      var wyb = SYN.filter(function (r, i) { return zazn[i]; }).map(function (r) { return r.id; });
       var dupl = k.duplikatyId.some(function (id) { return wyb.indexOf(id) >= 0; }), poza = k.poza.some(function (id) { return wyb.indexOf(id) >= 0; });
       var wpisano = $("#liczba-syn").value, liczba = wpisano !== "" && +wpisano === k.liczbaWierszy && k.brakuje > 0;
-      znalezione = (dupl ? 1 : 0) + (poza ? 1 : 0) + (liczba ? 1 : 0);
-      var trafione = k.duplikatyId.concat(k.poza); zbedne = wyb.filter(function (id) { return trafione.indexOf(id) < 0; }).length;
+      var znalezione = (dupl ? 1 : 0) + (poza ? 1 : 0) + (liczba ? 1 : 0);
+      var trafione = k.duplikatyId.concat(k.poza), zbedne = wyb.filter(function (id) { return trafione.indexOf(id) < 0; }).length;
+      kafelek("kaf-liczba", liczba ? "ok" : "brak", liczba ? "✓ znalezione: " + k.liczbaWierszy + " zamiast " + PROSILEM : SZUKAJ);
+      kafelek("kaf-id", dupl ? "ok" : "brak", dupl ? "✓ znalezione: " + k.duplikatyId.join(", ") + " dwa razy" : SZUKAJ);
+      kafelek("kaf-poza", poza ? "ok" : "brak", poza ? "✓ znalezione: " + k.poza.join(", ") : SZUKAJ);
       var t = "Znalezione błędy: " + znalezione + " z 3.";
       if (znalezione < 3) t += " Szukaj dalej: " + [!liczba ? "liczby wierszy" : "", !dupl ? "powtórzonego ID" : "", !poza ? "pensji poza widełkami" : ""].filter(Boolean).join(", ") + ".";
-      else t += " Komplet: brakuje " + k.brakuje + " wiersz, " + k.duplikatyId.join(", ") + " występuje dwa razy, " + k.poza.join(", ") + " ma pensję poza widełkami.";
+      else t += " Komplet: brakuje " + wierszy(k.brakuje) + ", " + k.duplikatyId.join(", ") + " występuje dwa razy, " + k.poza.join(", ") + " ma pensję poza widełkami.";
       if (zbedne) t += " Zaznaczono niepotrzebnie: " + zbedne + ".";
       $("#wynik-syn").textContent = t;
+    });
+
+    // "Pokaz odpowiedzi": podswietla bledne wiersze w tabeli, dopisuje etykiety i podsumowanie
+    var pokazano = false;
+    $("#pokaz-odp-syn").addEventListener("click", function () {
+      if (pokazano) return; pokazano = true; // drugie klikniecie nie dubluje etykiet
+      var opisPoza = [];
+      $$("tr", tb).forEach(function (tr) {
+        var r = SYN[+tr.dataset.i];
+        if (k.duplikatyId.indexOf(r.id) >= 0) { tr.classList.add("odp"); etykieta(tr, ".k-id", "to samo ID"); }
+        if (k.poza.indexOf(r.id) >= 0) {
+          tr.classList.add("odp"); etykieta(tr, ".k-pensja", "widełki levelu " + r.level + ": " + widelki(r.level));
+          opisPoza.push(r.id + " ma " + kwota(r.pensja) + " zł przy widełkach levelu " + r.level + ": " + widelki(r.level));
+        }
+      });
+      kafelek("kaf-liczba", "odp", k.liczbaWierszy + " zamiast " + PROSILEM + " (brakuje " + wierszy(k.brakuje) + ")");
+      kafelek("kaf-id", "odp", k.duplikatyId.join(", ") + " występuje dwa razy");
+      kafelek("kaf-poza", "odp", k.poza.join(", ") + " powyżej widełek");
+      $("#odp-syn").textContent = "Odpowiedzi: dostałeś " + k.liczbaWierszy + " wierszy, prosiłeś o " + PROSILEM + ". " + k.duplikatyId.join(", ") + " występuje dwa razy. " + opisPoza.join(". ") + ".";
     });
   })();
 
